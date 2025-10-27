@@ -1,0 +1,12 @@
+# GAEVENTS PRODUCTION LLC - robots.txt
+# https://gaeventsprod.com
+
+User-agent: *
+Allow: /
+Disallow: /css/
+Disallow: /js/
+Disallow: /components/
+
+# Sitemap
+Sitemap: https://gaeventsprod.com/sitemap.xml
+

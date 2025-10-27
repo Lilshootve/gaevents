@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact GAEVENTS for your event production needs. Get a custom quote for corporate events, conferences, galas, and immersive experiences. Based in Dawsonville, GA.">
+  <meta name="robots" content="index, follow">
+  
   <title>Contact Us | GAEVENTS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://gaeventsprod.com/contact.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  
   <style>
     :root {
       --color-black: #0E0E0E;
@@ -21,84 +33,185 @@
     }
     h1, h2 {
       font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
     }
     input, textarea, select {
       color: var(--color-black);
     }
+    /* Honeypot - hidden from users */
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-  <header class="bg-gray-900 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+  <a href="#main-content" id="skip-link" class="sr-only focus:not-sr-only">Skip to main content</a>
+  
+  <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95" role="banner">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-4">
       <div class="text-xl font-bold text-white">
-        <a href="index.html" class="hover:text-[var(--color-gold)]">GAEVENTS</a>
+        <a href="index.html" class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded" aria-label="GAEVENTS Home">GAEVENTS</a>
       </div>
-      <nav>
-        <ul class="flex space-x-4">
+      <nav aria-label="Main navigation">
+        <ul class="flex flex-wrap gap-2 sm:gap-4">
+          <li><a href="index.html" class="hover:text-[var(--color-gold)]">Home</a></li>
           <li><a href="about.html" class="hover:text-[var(--color-gold)]">About</a></li>
           <li><a href="services.html" class="hover:text-[var(--color-gold)]">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-[var(--color-gold)]">Gallery</a></li>
-          <li><a href="clients.html" class="hover:text-[var(--color-gold)]">Clients</a></li>
-          <li><a href="contact.html" class="text-[var(--color-gold)]">Contact</a></li>
+          <li><a href="contact.html" class="text-[var(--color-gold)] font-semibold" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="bg-[var(--color-gray)] py-16">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">Contact Us</h1>
-      <p class="max-w-3xl text-lg mb-8">We'd love to hear about your event. Fill out the form below and our team will get back to you within 24 hours.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="space-y-4 text-lg">
-          <p><strong>Phone:</strong> (123) 456-7890</p>
-          <p><strong>Email:</strong> <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)]">info@gaeventsprod.com</a></p>
-          <p><strong>Headquarters:</strong> Dawsonville, GA, USA (serving all states)</p>
-          <p>Operating Hours: Monday–Friday, 9:00 AM – 6:00 PM ET</p>
+  <main id="main-content" role="main">
+    <section class="bg-[var(--color-gray)] py-16" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">Contact Us</h1>
+        <p class="max-w-3xl text-lg mb-8">We'd love to hear about your event. Fill out the form below and our team will get back to you within 24 hours.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Information -->
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">Get In Touch</h2>
+              <address class="not-italic space-y-3">
+                <p><strong>Email:</strong> <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">info@gaeventsprod.com</a></p>
+                <p><strong>Headquarters:</strong></p>
+                <p class="text-gray-300">GAEVENTS PRODUCTION LLC<br>
+                190 FOUNDERS DR<br>
+                DAWSONVILLE, GA 30534, USA</p>
+                <p><strong>Operating Hours:</strong><br>Monday–Friday, 9:00 AM – 6:00 PM ET</p>
+              </address>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <form action="contact.php" method="post" class="space-y-4" aria-label="Contact form">
+            <div>
+              <label for="name" class="block mb-1 font-semibold">Name <span class="text-red-500" aria-label="required">*</span></label>
+              <input type="text" 
+                     id="name" 
+                     name="name" 
+                     required 
+                     class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                     placeholder="Your full name"
+                     aria-required="true">
+            </div>
+            
+            <div>
+              <label for="company" class="block mb-1 font-semibold">Company / Agency</label>
+              <input type="text" 
+                     id="company" 
+                     name="company" 
+                     class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                     placeholder="Company or agency name">
+            </div>
+            
+            <div>
+              <label for="email" class="block mb-1 font-semibold">Email <span class="text-red-500" aria-label="required">*</span></label>
+              <input type="email" 
+                     id="email" 
+                     name="email" 
+                     required 
+                     class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                     placeholder="you@example.com"
+                     aria-required="true">
+            </div>
+            
+            <div>
+              <label for="phone" class="block mb-1 font-semibold">Phone</label>
+              <input type="tel" 
+                     id="phone" 
+                     name="phone" 
+                     class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                     placeholder="(555) 555-5555">
+            </div>
+            
+            <div>
+              <label for="event_type" class="block mb-1 font-semibold">Event Type</label>
+              <input type="text" 
+                     id="event_type" 
+                     name="event_type" 
+                     class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                     placeholder="Conference, Gala, etc.">
+            </div>
+            
+            <div>
+              <label for="budget" class="block mb-1 font-semibold">Budget (USD)</label>
+              <input type="text" 
+                     id="budget" 
+                     name="budget" 
+                     class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                     placeholder="Estimated budget">
+            </div>
+            
+            <div>
+              <label for="message" class="block mb-1 font-semibold">Message <span class="text-red-500" aria-label="required">*</span></label>
+              <textarea id="message" 
+                        name="message" 
+                        rows="4" 
+                        required 
+                        class="w-full px-3 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]" 
+                        placeholder="Tell us about your event requirements"
+                        aria-required="true"></textarea>
+            </div>
+            
+            <!-- Honeypot Field (Hidden) -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website (leave blank)</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            
+            <button type="submit" 
+                    class="w-full bg-[var(--color-blue)] hover:bg-[var(--color-gold)] text-white py-3 px-6 rounded-md font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]">
+              Send Message
+            </button>
+            
+            <p class="text-sm text-gray-400">Fields marked with * are required.</p>
+          </form>
         </div>
-        <form action="contact.php" method="post" class="space-y-4">
-          <div>
-            <label for="name" class="block mb-1 font-semibold">Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-3 py-2 rounded-md text-black" placeholder="Your full name">
-          </div>
-          <div>
-            <label for="company" class="block mb-1 font-semibold">Company / Agency</label>
-            <input type="text" id="company" name="company" class="w-full px-3 py-2 rounded-md text-black" placeholder="Company or agency name">
-          </div>
-          <div>
-            <label for="email" class="block mb-1 font-semibold">Email</label>
-            <input type="email" id="email" name="email" required class="w-full px-3 py-2 rounded-md text-black" placeholder="you@example.com">
-          </div>
-          <div>
-            <label for="phone" class="block mb-1 font-semibold">Phone</label>
-            <input type="text" id="phone" name="phone" class="w-full px-3 py-2 rounded-md text-black" placeholder="(555) 555-5555">
-          </div>
-          <div>
-            <label for="event_type" class="block mb-1 font-semibold">Event Type</label>
-            <input type="text" id="event_type" name="event_type" class="w-full px-3 py-2 rounded-md text-black" placeholder="Conference, Gala, etc.">
-          </div>
-          <div>
-            <label for="budget" class="block mb-1 font-semibold">Budget (USD)</label>
-            <input type="text" id="budget" name="budget" class="w-full px-3 py-2 rounded-md text-black" placeholder="Estimated budget">
-          </div>
-          <div>
-            <label for="message" class="block mb-1 font-semibold">Message</label>
-            <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 rounded-md text-black" placeholder="Tell us about your event requirements"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-[var(--color-blue)] hover:bg-[var(--color-gold)] text-white py-3 px-6 rounded-md font-semibold transition">Send Message</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="bg-gray-900 py-8">
-    <div class="container mx-auto px-4 text-center text-sm">
-      <div class="mb-4">
-        <a href="terms.html" class="mr-4 hover:text-[var(--color-gold)]">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-[var(--color-gold)]">Privacy Policy</a>
+  <footer class="bg-gray-900 py-12 border-t border-gray-800" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">GAEVENTS</h3>
+          <address class="not-italic text-sm text-gray-400">
+            <p><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
+            <p>190 FOUNDERS DR</p>
+            <p>DAWSONVILLE, GA 30534, USA</p>
+            <p><a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)]">info@gaeventsprod.com</a></p>
+          </address>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">Quick Links</h3>
+          <nav class="space-y-2 text-sm">
+            <div><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)]">About Us</a></div>
+            <div><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)]">Services</a></div>
+            <div><a href="contact.html" class="text-[var(--color-gold)] font-semibold">Contact</a></div>
+          </nav>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">Legal</h3>
+          <nav class="space-y-2 text-sm">
+            <div><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)]">Terms & Conditions</a></div>
+            <div><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)]">Privacy Policy</a></div>
+            <div><a href="refund.html" class="text-gray-400 hover:text-[var(--color-gold)]">Refund Policy</a></div>
+          </nav>
+        </div>
       </div>
-      <p>© 2025 GAEVENTS Productions. All rights reserved.</p>
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; <span id="currentYear">2025</span> GAEVENTS PRODUCTION LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+  
+  <script src="components/init.js"></script>
 </body>
 </html>

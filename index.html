@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebSite">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAEVENTS | Corporate Event Production</title>
-  <!-- Load custom fonts and Tailwind via CDN -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="GAEVENTS PRODUCTION LLC - Full-service corporate event production and management. Serving clients nationwide with professional staging, audiovisual, logistics, and immersive experiences. Based in Dawsonville, GA.">
+  <meta name="keywords" content="corporate events, event production, staging, audiovisual, logistics, live streaming, conference production, Dawsonville Georgia">
+  <meta name="author" content="GAEVENTS PRODUCTION LLC">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaeventsprod.com/">
+  <meta property="og:title" content="GAEVENTS | Corporate Event Production & Management">
+  <meta property="og:description" content="Full-service corporate event production and management. Professional staging, audiovisual, logistics, and immersive experiences.">
+  <meta property="og:image" content="https://gaeventsprod.com/images/hero.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gaeventsprod.com/">
+  <meta property="twitter:title" content="GAEVENTS | Corporate Event Production & Management">
+  <meta property="twitter:description" content="Full-service corporate event production and management. Professional staging, audiovisual, logistics, and immersive experiences.">
+  <meta property="twitter:image" content="https://gaeventsprod.com/images/hero.jpg">
+  
+  <title>GAEVENTS | Corporate Event Production & Management</title>
+  <link rel="canonical" href="https://gaeventsprod.com/">
+  
+  <!-- Fonts with font-display: swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  
   <!-- Define our colour palette and fonts -->
   <style>
     :root {
@@ -23,89 +56,199 @@
     }
     h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
     }
   </style>
+  
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GAEVENTS PRODUCTION LLC",
+    "alternateName": "GAEVENTS",
+    "url": "https://gaeventsprod.com",
+    "logo": "https://gaeventsprod.com/images/logo.png",
+    "description": "Full-service corporate event production and management company",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "190 FOUNDERS DR",
+      "addressLocality": "Dawsonville",
+      "addressRegion": "GA",
+      "postalCode": "30534",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-000-000-0000",
+      "contactType": "Sales",
+      "email": "info@gaeventsprod.com"
+    },
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
-  <!-- Header with navigation -->
-  <header class="bg-gray-900 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <div class="text-xl font-bold text-white">
-        <a href="index.html" class="hover:text-[var(--color-gold)]">GAEVENTS</a>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" id="skip-link" class="sr-only focus:not-sr-only">Skip to main content</a>
+  
+  <!-- Header Component -->
+  <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95" role="banner">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="text-xl font-bold text-white" itemscope itemtype="https://schema.org/Organization">
+        <a href="index.html" class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded" aria-label="GAEVENTS Home" itemprop="name">GAEVENTS</a>
       </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="about.html" class="hover:text-[var(--color-gold)]">About</a></li>
-          <li><a href="services.html" class="hover:text-[var(--color-gold)]">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-[var(--color-gold)]">Gallery</a></li>
-          <li><a href="clients.html" class="hover:text-[var(--color-gold)]">Clients</a></li>
-          <li><a href="contact.html" class="hover:text-[var(--color-gold)]">Contact</a></li>
+      <nav aria-label="Main navigation">
+        <ul class="flex flex-wrap gap-2 sm:gap-4" role="list">
+          <li>
+            <a href="index.html" 
+               class="text-[var(--color-gold)] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="about.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">About</a>
+          </li>
+          <li>
+            <a href="services.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Services</a>
+          </li>
+          <li>
+            <a href="gallery.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Gallery</a>
+          </li>
+          <li>
+            <a href="clients.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Clients</a>
+          </li>
+          <li>
+            <a href="contact.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero section with background image -->
-  <section class="bg-cover bg-center" style="background-image: url('images/hero.jpg');">
-    <div class="bg-black bg-opacity-60">
-      <div class="container mx-auto px-4 py-24 text-center">
-        <h1 class="text-4xl sm:text-6xl font-bold mb-6">Transforming Ideas into Unforgettable Experiences</h1>
-        <p class="max-w-3xl mx-auto text-lg mb-8">We design, produce and deliver high‑impact corporate events across the United States. From conferences and galas to immersive experiences, we make every detail count.</p>
-        <a href="contact.html" class="inline-block bg-[var(--color-blue)] hover:bg-[var(--color-gold)] text-white py-3 px-6 rounded-full font-semibold transition">Request a Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About summary -->
-  <section class="bg-[var(--color-gray)] py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-[var(--color-gold)]">Who We Are</h2>
-      <p class="max-w-3xl text-lg leading-relaxed">GAEVENTS is a full‑service event production company headquartered in Dawsonville, GA and serving clients nationwide. Our team of creative professionals, technicians and logistics specialists bring decades of experience to every project. We partner with corporate, government and agency clients to turn strategic goals into extraordinary live, virtual and hybrid events.</p>
-    </div>
-  </section>
-
-  <!-- Services summary section -->
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-[var(--color-gold)]">Our Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-[var(--color-gray)] p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-          <h3 class="text-2xl font-bold mb-4">Production</h3>
-          <p>End‑to‑end event production including stage design, audio, video, lighting and technical direction.</p>
-          <a href="services.html#production" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] mt-4 inline-block">Learn more →</a>
-        </div>
-        <div class="bg-[var(--color-gray)] p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-          <h3 class="text-2xl font-bold mb-4">Logistics</h3>
-          <p>Comprehensive logistics: permits, transportation, safety, staff management and venue coordination.</p>
-          <a href="services.html#logistics" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] mt-4 inline-block">Learn more →</a>
-        </div>
-        <div class="bg-[var(--color-gray)] p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-          <h3 class="text-2xl font-bold mb-4">Experiences</h3>
-          <p>Immersive elements like AR/VR installations, drone shows, experiential activations and creative concepts.</p>
-          <a href="services.html#experiences" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] mt-4 inline-block">Learn more →</a>
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero section with background image -->
+    <section class="bg-cover bg-center relative" role="region" aria-label="Hero section">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero.jpg');" aria-hidden="true"></div>
+      <div class="relative bg-black bg-opacity-60">
+        <div class="container mx-auto px-4 py-24 text-center">
+          <h1 class="text-4xl sm:text-6xl font-bold mb-6" data-aos="fade-up">Transforming Ideas into Unforgettable Experiences</h1>
+          <p class="max-w-3xl mx-auto text-lg mb-8" data-aos="fade-up" data-aos-delay="100">We design, produce and deliver high‑impact corporate events across the United States. From conferences and galas to immersive experiences, we make every detail count.</p>
+          <a href="contact.html" 
+             class="inline-block bg-[var(--color-blue)] hover:bg-[var(--color-gold)] text-white py-3 px-6 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-transparent"
+             aria-label="Request a quote for your event">Request a Quote</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Call-to-action section -->
-  <section class="bg-[var(--color-blue)] py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Ready to Create Your Next Event?</h2>
-      <p class="max-w-2xl mx-auto text-lg mb-8">Contact our team today to discuss your vision. We’ll provide a tailored proposal and outline how GAEVENTS can bring your ideas to life.</p>
-      <a href="contact.html" class="bg-[var(--color-gold)] hover:bg-white text-black py-3 px-6 rounded-full font-semibold transition">Let’s Talk</a>
-    </div>
-  </section>
+    <!-- About summary -->
+    <section class="bg-[var(--color-gray)] py-16" role="region" aria-label="About section" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6 text-[var(--color-gold)]">Who We Are</h2>
+        <p class="max-w-3xl text-lg leading-relaxed">GAEVENTS is a full‑service event production company headquartered in Dawsonville, GA and serving clients nationwide. Our team of creative professionals, technicians and logistics specialists bring decades of experience to every project. We partner with corporate, government and agency clients to turn strategic goals into extraordinary live, virtual and hybrid events.</p>
+      </div>
+    </section>
+
+    <!-- Services summary section -->
+    <section class="py-16" role="region" aria-label="Services section" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-[var(--color-gold)]">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-[var(--color-gray)] p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105" data-aos="flip-left" data-aos-delay="0">
+            <h3 class="text-2xl font-bold mb-4">Production</h3>
+            <p>End‑to‑end event production including stage design, audio, video, lighting and technical direction.</p>
+            <a href="services.html#production" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] mt-4 inline-block focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Learn more →</a>
+          </div>
+          <div class="bg-[var(--color-gray)] p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105" data-aos="flip-left" data-aos-delay="100">
+            <h3 class="text-2xl font-bold mb-4">Logistics</h3>
+            <p>Comprehensive logistics: permits, transportation, safety, staff management and venue coordination.</p>
+            <a href="services.html#logistics" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] mt-4 inline-block focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Learn more →</a>
+          </div>
+          <div class="bg-[var(--color-gray)] p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105" data-aos="flip-left" data-aos-delay="200">
+            <h3 class="text-2xl font-bold mb-4">Experiences</h3>
+            <p>Immersive elements like AR/VR installations, drone shows, experiential activations and creative concepts.</p>
+            <a href="services.html#experiences" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] mt-4 inline-block focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-action section -->
+    <section class="bg-[var(--color-blue)] py-16" role="region" aria-label="Call to action" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Create Your Next Event?</h2>
+        <p class="max-w-2xl mx-auto text-lg mb-8">Contact our team today to discuss your vision. We'll provide a tailored proposal and outline how GAEVENTS can bring your ideas to life.</p>
+        <a href="contact.html" 
+           class="bg-[var(--color-gold)] hover:bg-white text-black py-3 px-6 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
+           aria-label="Contact us to discuss your event">Let's Talk</a>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 py-8">
-    <div class="container mx-auto px-4 text-center text-sm">
-      <div class="mb-4">
-        <a href="terms.html" class="mr-4 hover:text-[var(--color-gold)]">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-[var(--color-gold)]">Privacy Policy</a>
+  <footer class="bg-gray-900 py-12 border-t border-gray-800" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)] font-sans">GAEVENTS</h3>
+          <address class="not-italic text-sm text-gray-400 leading-relaxed">
+            <p class="mb-2"><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
+            <p class="mb-2">190 FOUNDERS DR</p>
+            <p class="mb-2">DAWSONVILLE, GA 30534, USA</p>
+            <p class="mb-2">
+              <a href="mailto:info@gaeventsprod.com" 
+                 class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded"
+                 aria-label="Email GAEVENTS">info@gaeventsprod.com</a>
+            </p>
+          </address>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)] font-sans">Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">About Us</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Our Services</a></li>
+              <li><a href="gallery.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Gallery</a></li>
+              <li><a href="clients.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Clients</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Legal -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)] font-sans">Legal</h3>
+          <nav aria-label="Legal navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Terms & Conditions</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Privacy Policy</a></li>
+              <li><a href="refund.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Refund Policy</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <p>© 2025 GAEVENTS Productions. All rights reserved.</p>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; <span id="currentYear">2025</span> GAEVENTS PRODUCTION LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+  
+  <!-- Scripts -->
+  <script src="components/init.js"></script>
 </body>
 </html>
