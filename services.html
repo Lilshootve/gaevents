@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Organization">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive event production services by GAEVENTS. From production and AV to logistics and immersive experiences - we deliver it all.">
+  <meta name="keywords" content="event production services, corporate events, AV production, event logistics, immersive experiences, event planning">
+  <meta name="author" content="GAEVENTS PRODUCTION LLC">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaeventsprod.com/services.html">
+  <meta property="og:title" content="Event Production Services | GAEVENTS">
+  <meta property="og:description" content="Comprehensive event production services for corporations, government, and healthcare organizations.">
+  <meta property="og:image" content="https://gaeventsprod.com/images/hero.jpg">
+  
   <title>Services | GAEVENTS</title>
+  <link rel="canonical" href="https://gaeventsprod.com/services.html">
   
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -12,9 +25,22 @@
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
   <link rel="manifest" href="images/favicon/site.webmanifest">
   
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/light-effects.css">
+  
   <style>
     :root {
       --color-black: #0E0E0E;
@@ -22,14 +48,95 @@
       --color-blue: #005C99;
       --color-gold: #DAA520;
       --color-white: #F5F5F5;
+      --color-steel-blue: #4682B4;
+      --color-charcoal: #36454F;
     }
     body {
       font-family: 'Sora', sans-serif;
       color: var(--color-white);
       background-color: var(--color-black);
     }
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Service Category Cards */
+    .category-card {
+      background: linear-gradient(145deg, rgba(54, 69, 79, 0.8), rgba(31, 31, 31, 0.9));
+      border: 2px solid rgba(70, 130, 180, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+    }
+    .category-card:hover {
+      border-color: rgba(218, 165, 32, 0.6);
+      box-shadow: 0 15px 50px rgba(218, 165, 32, 0.3);
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* Service Item Cards */
+    .service-item {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 31, 31, 0.95));
+      border: 1px solid rgba(70, 130, 180, 0.2);
+      transition: all 0.3s ease;
+    }
+    .service-item:hover {
+      border-color: rgba(218, 165, 32, 0.5);
+      box-shadow: 0 10px 40px rgba(218, 165, 32, 0.2);
+      transform: translateY(-4px);
+    }
+    .service-price {
+      background: linear-gradient(135deg, var(--color-gold), #FFD700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Process Timeline */
+    .process-step {
+      position: relative;
+      padding: 2rem;
+      background: linear-gradient(145deg, rgba(54, 69, 79, 0.6), rgba(31, 31, 31, 0.8));
+      border-left: 4px solid var(--color-gold);
+      transition: all 0.3s ease;
+    }
+    .process-step:hover {
+      border-left-color: var(--color-steel-blue);
+      background: linear-gradient(145deg, rgba(70, 130, 180, 0.3), rgba(54, 69, 79, 0.6));
+    }
+    .step-number {
+      position: absolute;
+      left: -15px;
+      top: 2rem;
+      width: 32px;
+      height: 32px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--color-black);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--color-gold), var(--color-steel-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Tag Badges */
+    .service-tag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, rgba(70, 130, 180, 0.2), rgba(0, 92, 153, 0.2));
+      border: 1px solid rgba(218, 165, 32, 0.3);
+      border-radius: 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-gold);
     }
   </style>
 </head>
@@ -52,190 +159,300 @@
   <div class="light-beam"></div>
   <div class="light-beam"></div>
   
-  <header class="bg-gray-900 py-4">
+  <!-- Header -->
+  <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95" role="banner">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="text-xl font-bold text-white">
-        <a href="index.html" class="hover:text-[var(--color-gold)]">GAEVENTS</a>
+        <a href="index.html" class="hover:text-[var(--color-gold)] transition-colors">GAEVENTS</a>
       </div>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul class="flex space-x-4">
-          <li><a href="about.html" class="hover:text-[var(--color-gold)]">About</a></li>
-          <li><a href="services.html" class="text-[var(--color-gold)]">Services</a></li>
-          <li><a href="clients.html" class="hover:text-[var(--color-gold)]">Clients</a></li>
-          <li><a href="contact.html" class="hover:text-[var(--color-gold)]">Contact</a></li>
+          <li><a href="index.html" class="hover:text-[var(--color-gold)] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[var(--color-gold)] transition-colors">About</a></li>
+          <li><a href="services.html" class="text-[var(--color-gold)] font-semibold transition-colors" aria-current="page">Services</a></li>
+          <li><a href="clients.html" class="hover:text-[var(--color-gold)] transition-colors">Clients</a></li>
+          <li><a href="contact.html" class="hover:text-[var(--color-gold)] transition-colors">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="section-background py-16">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">Our Services</h1>
-      <p class="mb-8 max-w-3xl text-lg">We offer comprehensive services to meet every event requirement. Explore our offerings below:</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service cards -->
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Full Corporate Event Production & Management</h3>
-          <p class="mb-2">End-to-end planning, logistics and technical execution.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$20,000 – $150,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Stage & Rigging Rental and Setup</h3>
-          <p class="mb-2">Platforms, truss systems and staging labor.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$5,000 – $50,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Audiovisual Production (LED Screens, Video Mapping)</h3>
-          <p class="mb-2">Large-scale visual and technical production.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$10,000 – $100,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Professional Sound System & Engineering</h3>
-          <p class="mb-2">PA systems, microphones, mixers and operators.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$3,000 – $25,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Lighting Design & Architectural Illumination</h3>
-          <p class="mb-2">Ambient, decorative and show lighting design.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$4,000 – $40,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Hybrid / Live-Streaming Event Production</h3>
-          <p class="mb-2">Multi-camera setup, online broadcast and technical staff.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$8,000 – $75,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Corporate Catering Services</h3>
-          <p class="mb-2">Full food service for conferences and receptions.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$3,000 – $100,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Permits, Logistics & Site Coordination</h3>
-          <p class="mb-2">Local permits, security coordination and traffic flow.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$2,000 – $20,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Premium Furniture & Event Decoration Rental</h3>
-          <p class="mb-2">Tables, chairs, props, floral and themed décor.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$1,000 – $30,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">VIP / Speaker Travel & Accommodation Management</h3>
-          <p class="mb-2">Booking, transport and travel coordination.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$2,000 – $50,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Event Branding, Graphics & Signage</h3>
-          <p class="mb-2">Visual identity, banners and print materials.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$1,500 – $15,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Guest Speakers or Talent Booking</h3>
-          <p class="mb-2">Professional speakers, hosts or performers.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$5,000 – $100,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Photography & Videography Coverage</h3>
-          <p class="mb-2">Event documentation, editing and delivery.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$2,000 – $20,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Security & Access Control Staff</h3>
-          <p class="mb-2">Guards, ushers and crowd-control personnel.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$1,000 – $15,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Attendee Registration & Check-In System</h3>
-          <p class="mb-2">On-site or digital registration platform setup.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$1,000 – $10,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Immersive or Experiential Installations</h3>
-          <p class="mb-2">Interactive zones, AR/VR, or themed experiences.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$5,000 – $80,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Heavy Equipment Transport & Logistics</h3>
-          <p class="mb-2">Cargo transport, cranes and load‑in coordination.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$3,000 – $40,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">LED Wall & Visual Content Control</h3>
-          <p class="mb-2">LED screen rental and content playback services.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$4,000 – $60,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Luxury Gala or VIP Catering Experience</h3>
-          <p class="mb-2">High‑end food, beverage and presentation setup.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$10,000 – $100,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Custom Stage & Set Design</h3>
-          <p class="mb-2">Tailored designs and fabrication for event themes.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$8,000 – $70,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Digital Marketing & Event Promotion Campaigns</h3>
-          <p class="mb-2">Paid ads, email campaigns and social coverage.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$3,000 – $30,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Drone Aerial Filming or Light Shows</h3>
-          <p class="mb-2">Aerial coverage, mapping or drone performances.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$2,000 – $25,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Sponsorship & Partner Management</h3>
-          <p class="mb-2">Securing and managing event sponsors.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$2,000 – $20,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Premium Bar & Beverage Service</h3>
-          <p class="mb-2">Full‑service bar with premium beverages.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$5,000 – $40,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Attendee Transportation / Shuttle Services</h3>
-          <p class="mb-2">Buses, vans or private transport logistics.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$1,000 – $30,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Concert‑Level Stage & Artist Production</h3>
-          <p class="mb-2">Technical setup for large‑scale performances.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$10,000 – $100,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Multilingual Interpretation & Translation Services</h3>
-          <p class="mb-2">Real‑time interpretation and translation.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$3,000 – $20,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Event Hostesses, Greeters & PR Staff</h3>
-          <p class="mb-2">On‑site personnel for coordination and guest care.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$1,000 – $10,000+</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Conference Coffee Breaks & Snack Catering</h3>
-          <p class="mb-2">Food and beverage setup for sessions or breaks.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$2,000 – $15,000</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Cybersecurity & Digital Streaming Management</h3>
-          <p class="mb-2">Secure streaming, access control and data safety.</p>
-          <p class="text-[var(--color-gold)] font-semibold">$3,000 – $25,000+</p>
+  <main>
+    <!-- Hero Section -->
+    <section class="section-background py-24 relative overflow-hidden" data-aos="fade-up">
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+          <h1 class="text-5xl sm:text-7xl font-bold mb-6 gradient-text" data-aos="fade-up">Comprehensive Event Solutions</h1>
+          <p class="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            From concept to execution, we deliver end-to-end event production services that transform your vision into unforgettable experiences.
+          </p>
+          <a href="contact.html" 
+             class="inline-block bg-[var(--color-gold)] hover:bg-white text-black py-4 px-10 rounded-full font-bold text-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+             data-aos="zoom-in" data-aos-delay="200">
+            Request a Custom Quote
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="bg-gray-900 py-8">
-    <div class="container mx-auto px-4 text-center text-sm">
-      <div class="mb-4">
-        <a href="terms.html" class="mr-4 hover:text-[var(--color-gold)]">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-[var(--color-gold)]">Privacy Policy</a>
+    <!-- Service Categories -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-[var(--color-gold)]" data-aos="fade-up">Our Service Categories</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+          <div class="category-card p-8 rounded-lg cursor-pointer" data-aos="flip-left" data-aos-delay="100">
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Production</h3>
+            <p class="text-gray-300 text-center">Complete event production from planning to execution with professional staging and technical expertise.</p>
+          </div>
+          <div class="category-card p-8 rounded-lg cursor-pointer" data-aos="flip-left" data-aos-delay="200">
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Audiovisual</h3>
+            <p class="text-gray-300 text-center">State-of-the-art AV solutions including LED walls, sound systems, lighting, and live streaming.</p>
+          </div>
+          <div class="category-card p-8 rounded-lg cursor-pointer" data-aos="flip-left" data-aos-delay="300">
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Logistics</h3>
+            <p class="text-gray-300 text-center">Comprehensive logistics management including permits, transportation, staffing, and coordination.</p>
+          </div>
+          <div class="category-card p-8 rounded-lg cursor-pointer" data-aos="flip-left" data-aos-delay="400">
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Experiences</h3>
+            <p class="text-gray-300 text-center">Immersive technologies and experiential activations including AR/VR, installations, and creative concepts.</p>
+          </div>
+        </div>
       </div>
-      <p>© 2025 GAEVENTS Productions. All rights reserved.</p>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-6 text-[var(--color-gold)]" data-aos="fade-up">Complete Service Portfolio</h2>
+        <p class="text-center text-gray-400 mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Explore our comprehensive range of event production services designed to meet every requirement and exceed expectations.
+        </p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <!-- Service Items -->
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Full Event Production</h3>
+            <p class="text-gray-300 mb-4 text-sm">End-to-end planning, logistics, and technical execution for complete event management.</p>
+            <div class="service-price text-lg font-bold mb-2">$20,000 - $150,000+</div>
+            <span class="service-tag">Core Service</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Stage & Rigging</h3>
+            <p class="text-gray-300 mb-4 text-sm">Professional staging platforms, truss systems, and rigging services for safe, impressive setups.</p>
+            <div class="service-price text-lg font-bold mb-2">$5,000 - $50,000</div>
+            <span class="service-tag">Staging</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">LED Production</h3>
+            <p class="text-gray-300 mb-4 text-sm">Large-scale LED screens, video mapping, and visual content delivery for maximum impact.</p>
+            <div class="service-price text-lg font-bold mb-2">$10,000 - $100,000+</div>
+            <span class="service-tag">Visual</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Sound Systems</h3>
+            <p class="text-gray-300 mb-4 text-sm">Premium PA systems, wireless microphones, mixing consoles, and audio engineering.</p>
+            <div class="service-price text-lg font-bold mb-2">$3,000 - $25,000</div>
+            <span class="service-tag">Audio</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Lighting Design</h3>
+            <p class="text-gray-300 mb-4 text-sm">Professional lighting design, ambient illumination, and creative light shows.</p>
+            <div class="service-price text-lg font-bold mb-2">$4,000 - $40,000</div>
+            <span class="service-tag">Illumination</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="600">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Live Streaming</h3>
+            <p class="text-gray-300 mb-4 text-sm">Multi-camera production, online broadcast, and hybrid event streaming solutions.</p>
+            <div class="service-price text-lg font-bold mb-2">$8,000 - $75,000</div>
+            <span class="service-tag">Digital</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="700">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Event Catering</h3>
+            <p class="text-gray-300 mb-4 text-sm">Full-service corporate catering for conferences, receptions, and VIP events.</p>
+            <div class="service-price text-lg font-bold mb-2">$3,000 - $100,000+</div>
+            <span class="service-tag">Hospitality</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="800">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Site Coordination</h3>
+            <p class="text-gray-300 mb-4 text-sm">Permits, security coordination, traffic management, and venue logistics.</p>
+            <div class="service-price text-lg font-bold mb-2">$2,000 - $20,000+</div>
+            <span class="service-tag">Logistics</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="900">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Furniture & Decor</h3>
+            <p class="text-gray-300 mb-4 text-sm">Premium rental furniture, floral arrangements, themed décor, and venue styling.</p>
+            <div class="service-price text-lg font-bold mb-2">$1,000 - $30,000</div>
+            <span class="service-tag">Design</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="1000">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Travel Management</h3>
+            <p class="text-gray-300 mb-4 text-sm">VIP and speaker travel arrangements, accommodation, and transportation coordination.</p>
+            <div class="service-price text-lg font-bold mb-2">$2,000 - $50,000</div>
+            <span class="service-tag">Concierge</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="1100">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Event Branding</h3>
+            <p class="text-gray-300 mb-4 text-sm">Visual identity, custom graphics, banners, signage, and branded materials.</p>
+            <div class="service-price text-lg font-bold mb-2">$1,500 - $15,000</div>
+            <span class="service-tag">Creative</span>
+          </div>
+
+          <div class="service-item p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="1200">
+            <h3 class="text-xl font-bold mb-3 text-[var(--color-gold)]">Talent Booking</h3>
+            <p class="text-gray-300 mb-4 text-sm">Professional speakers, hosts, performers, and celebrity talent booking.</p>
+            <div class="service-price text-lg font-bold mb-2">$5,000 - $100,000+</div>
+            <span class="service-tag">Entertainment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-[var(--color-gold)]" data-aos="fade-up">How We Work</h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="process-step rounded-lg" data-aos="fade-right" data-aos-delay="100">
+            <div class="step-number">1</div>
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-gold)]">Discovery & Planning</h3>
+            <p class="text-gray-300">We begin with a comprehensive consultation to understand your goals, audience, budget, and vision. Our team conducts venue assessments and creates detailed production plans.</p>
+          </div>
+          
+          <div class="process-step rounded-lg" data-aos="fade-right" data-aos-delay="200">
+            <div class="step-number">2</div>
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-gold)]">Design & Development</h3>
+            <p class="text-gray-300">Our creative and technical teams collaborate to design event experiences, develop content strategies, and create custom solutions tailored to your objectives.</p>
+          </div>
+          
+          <div class="process-step rounded-lg" data-aos="fade-right" data-aos-delay="300">
+            <div class="step-number">3</div>
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-gold)]">Pre-Production</h3>
+            <p class="text-gray-300">We coordinate all logistics, secure permits, schedule rehearsals, and prepare technical setups. Multiple checklists ensure nothing is overlooked.</p>
+          </div>
+          
+          <div class="process-step rounded-lg" data-aos="fade-right" data-aos-delay="400">
+            <div class="step-number">4</div>
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-gold)]">Execution & Monitoring</h3>
+            <p class="text-gray-300">On event day, our team manages every aspect with precision. Real-time monitoring and rapid response capabilities ensure flawless execution.</p>
+          </div>
+          
+          <div class="process-step rounded-lg" data-aos="fade-right" data-aos-delay="500">
+            <div class="step-number">5</div>
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-gold)]">Wrap & Follow-Up</h3>
+            <p class="text-gray-300">We handle load-out, equipment return, and final documentation. Post-event analysis includes metrics, feedback collection, and future recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-16 text-[var(--color-gold)]" data-aos="fade-up">Why Choose GAEVENTS</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-8 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="100">
+              <h3 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">Proven Track Record</h3>
+              <p class="text-gray-300">500+ successful events across 50+ major cities with 100% client satisfaction rate and 2M+ attendees served.</p>
+            </div>
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-8 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="200">
+              <h3 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">Scalable Solutions</h3>
+              <p class="text-gray-300">From intimate executive meetings to multi-day conferences with 10,000+ attendees, we scale our expertise to match your event size.</p>
+            </div>
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-8 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="300">
+              <h3 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">Technology Leaders</h3>
+              <p class="text-gray-300">Cutting-edge equipment, 4K/8K production capabilities, AI integration, and advanced AR/VR experiences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-[var(--color-steel-blue)] to-[var(--color-blue)] py-20" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-white">Ready to Elevate Your Next Event?</h2>
+        <p class="max-w-3xl mx-auto text-xl mb-10 text-white/90">
+          Let's discuss your vision and create a custom proposal that brings your event to life with world-class production excellence.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" 
+             class="inline-block bg-[var(--color-gold)] hover:bg-white text-black py-4 px-10 rounded-full font-bold text-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+            Request Quote
+          </a>
+          <a href="clients.html" 
+             class="inline-block bg-white/10 hover:bg-white/20 text-white py-4 px-10 rounded-full font-bold text-lg transition transform hover:scale-105 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white">
+            View Case Studies
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-12 border-t border-gray-800" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">GAEVENTS</h3>
+          <address class="not-italic text-sm text-gray-400 leading-relaxed">
+            <p class="mb-2"><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
+            <p class="mb-2">190 FOUNDERS DR</p>
+            <p class="mb-2">DAWSONVILLE, GA 30534, USA</p>
+            <p class="mb-2">
+              <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors">
+                info@gaeventsprod.com
+              </a>
+            </p>
+          </address>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="index.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Home</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">About Us</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Services</a></li>
+              <li><a href="clients.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Clients</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Legal -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">Legal</h3>
+          <nav aria-label="Legal navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Terms & Conditions</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Privacy Policy</a></li>
+              <li><a href="refund.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Refund Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; <span id="currentYear">2025</span> GAEVENTS PRODUCTION LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+  
+  <!-- Scripts -->
+  <script src="components/init.js"></script>
 </body>
 </html>
