@@ -14,6 +14,7 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/light-effects.css">
   <style>
     :root {
       --color-black: #0E0E0E;
@@ -33,16 +34,34 @@
   </style>
 </head>
 <body>
-  <header class="bg-gray-900 py-4">
+  <!-- Animated Light Particles Background -->
+  <div class="light-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <!-- Glowing Light Beams -->
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  
+  <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="text-xl font-bold text-white">
         <a href="index.html" class="hover:text-[var(--color-gold)]">GAEVENTS</a>
       </div>
       <nav>
         <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:text-[var(--color-gold)]">Home</a></li>
           <li><a href="about.html" class="hover:text-[var(--color-gold)]">About</a></li>
           <li><a href="services.html" class="hover:text-[var(--color-gold)]">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-[var(--color-gold)]">Gallery</a></li>
           <li><a href="clients.html" class="hover:text-[var(--color-gold)]">Clients</a></li>
           <li><a href="contact.html" class="hover:text-[var(--color-gold)]">Contact</a></li>
         </ul>
@@ -50,7 +69,18 @@
     </div>
   </header>
 
-  <section class="bg-[var(--color-gray)] py-16">
+  <!-- Hero -->
+  <section class="section-background py-20 relative">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gold)] via-[var(--color-steel-blue)] to-[var(--color-gold)]">Privacy Policy</h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">Your privacy matters to us. Learn how we collect, use, and protect your information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Content -->
+  <section class="section-background py-12 relative pb-20">
     <div class="container mx-auto px-4">
       <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">Privacy Policy</h1>
       <p class="mb-6 text-lg">This Privacy Policy explains how GAEVENTS Productions LLC ("GAEVENTS", "we", "us") collects, uses and safeguards information when you use our website or engage our services. By accessing our site or providing information, you agree to the practices described herein.</p>
