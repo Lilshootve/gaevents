@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Organization">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about GAEVENTS - Premier event production company. Discover our history, values, certifications, and commitment to delivering world-class experiences.">
+  <meta name="keywords" content="GAEVENTS, event production, corporate events, event company history, event production team, Georgia events">
+  <meta name="author" content="GAEVENTS PRODUCTION LLC">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaeventsprod.com/about.html">
+  <meta property="og:title" content="About GAEVENTS | Premier Event Production Company">
+  <meta property="og:description" content="Premier event production company delivering world-class experiences nationwide.">
+  <meta property="og:image" content="https://gaeventsprod.com/images/hero.jpg">
+  
   <title>About Us | GAEVENTS</title>
+  <link rel="canonical" href="https://gaeventsprod.com/about.html">
   
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -12,9 +25,22 @@
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
   <link rel="manifest" href="images/favicon/site.webmanifest">
   
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/light-effects.css">
+  
   <style>
     :root {
       --color-black: #0E0E0E;
@@ -22,14 +48,129 @@
       --color-blue: #005C99;
       --color-gold: #DAA520;
       --color-white: #F5F5F5;
+      --color-steel-blue: #4682B4;
+      --color-charcoal: #36454F;
     }
     body {
       font-family: 'Sora', sans-serif;
       color: var(--color-white);
       background-color: var(--color-black);
     }
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Statistic Cards */
+    .stat-card {
+      background: linear-gradient(145deg, rgba(54, 69, 79, 0.8), rgba(31, 31, 31, 0.9));
+      border: 2px solid rgba(70, 130, 180, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+    }
+    .stat-card:hover {
+      border-color: rgba(218, 165, 32, 0.6);
+      box-shadow: 0 8px 30px rgba(218, 165, 32, 0.3);
+      transform: translateY(-5px);
+    }
+    .stat-number {
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, var(--color-gold), var(--color-steel-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Timeline */
+    .timeline-item {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 3rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      box-shadow: 0 0 20px rgba(218, 165, 32, 0.8);
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1rem;
+      width: 2px;
+      height: calc(100% + 2rem);
+      background: linear-gradient(180deg, var(--color-steel-blue), transparent);
+    }
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    /* Value Cards */
+    .value-card {
+      background: linear-gradient(145deg, rgba(54, 69, 79, 0.6), rgba(31, 31, 31, 0.8));
+      border: 1px solid rgba(70, 130, 180, 0.2);
+      transition: all 0.4s ease;
+    }
+    .value-card:hover {
+      border-color: rgba(218, 165, 32, 0.5);
+      box-shadow: 0 10px 40px rgba(218, 165, 32, 0.2);
+      transform: translateY(-8px);
+    }
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(218, 165, 32, 0.2), rgba(70, 130, 180, 0.2));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 1rem;
+    }
+
+    /* Certification Badge */
+    .badge {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, rgba(70, 130, 180, 0.3), rgba(0, 92, 153, 0.3));
+      border: 2px solid var(--color-gold);
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .badge:hover {
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.3), rgba(255, 215, 0, 0.3));
+      transform: scale(1.05);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--color-gold), var(--color-steel-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
     }
   </style>
 </head>
@@ -52,47 +193,282 @@
   <div class="light-beam"></div>
   <div class="light-beam"></div>
   
-  <header class="bg-gray-900 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+  <!-- Header -->
+  <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95" role="banner">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-4">
       <div class="text-xl font-bold text-white">
-        <a href="index.html" class="hover:text-[var(--color-gold)]">GAEVENTS</a>
+        <a href="index.html" class="hover:text-[var(--color-gold)] transition-colors">GAEVENTS</a>
       </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="about.html" class="text-[var(--color-gold)]">About</a></li>
-          <li><a href="services.html" class="hover:text-[var(--color-gold)]">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-[var(--color-gold)]">Gallery</a></li>
-          <li><a href="clients.html" class="hover:text-[var(--color-gold)]">Clients</a></li>
-          <li><a href="contact.html" class="hover:text-[var(--color-gold)]">Contact</a></li>
+      <nav aria-label="Main navigation">
+        <ul class="flex flex-wrap gap-2 sm:gap-4">
+          <li><a href="index.html" class="hover:text-[var(--color-gold)] transition-colors">Home</a></li>
+          <li><a href="about.html" class="text-[var(--color-gold)] font-semibold transition-colors" aria-current="page">About</a></li>
+          <li><a href="services.html" class="hover:text-[var(--color-gold)] transition-colors">Services</a></li>
+          <li><a href="clients.html" class="hover:text-[var(--color-gold)] transition-colors">Clients</a></li>
+          <li><a href="contact.html" class="hover:text-[var(--color-gold)] transition-colors">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="section-background py-16">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">About GAEVENTS</h1>
-      <p class="max-w-3xl text-lg mb-6">Born from a passion for unforgettable experiences, GAEVENTS was founded in Dawsonville, GA and has grown into a nationwide partner for corporate, government and agency clients. Our mission is to design and execute events that engage audiences, convey messages clearly and inspire lasting impact.</p>
-      <p class="max-w-3xl text-lg mb-6">We believe excellence is achieved through rigorous planning, creative innovation and flawless execution. Our team includes event producers, stage designers, technical engineers, logisticians and client service experts who collaborate to deliver seamless events of any scale — from intimate executive meetings to multi‑day conferences and live productions.</p>
-      <h2 class="text-3xl font-bold mb-4 text-[var(--color-gold)]">Our Values</h2>
-      <ul class="list-disc ml-6 space-y-2 text-lg">
-        <li><strong>Professionalism:</strong> We honour deadlines, budgets and commitments.</li>
-        <li><strong>Transparency:</strong> Open communication and detailed planning ensure there are no surprises.</li>
-        <li><strong>Innovation:</strong> We embrace technology and creative concepts to elevate experiences.</li>
-        <li><strong>Safety:</strong> We prioritize the safety of our clients, guests and staff at every stage.</li>
-        <li><strong>Integrity:</strong> We act with honesty and respect in all interactions.</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer class="bg-gray-900 py-8">
-    <div class="container mx-auto px-4 text-center text-sm">
-      <div class="mb-4">
-        <a href="terms.html" class="mr-4 hover:text-[var(--color-gold)]">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-[var(--color-gold)]">Privacy Policy</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="section-background py-24 relative overflow-hidden" data-aos="fade-up">
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl sm:text-7xl font-bold mb-6 gradient-text" data-aos="fade-up">About GAEVENTS</h1>
+          <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Where Innovation Meets Execution. Delivering world-class event experiences that transform ideas into unforgettable moments.
+          </p>
+          <p class="text-lg text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Founded in Dawsonville, Georgia, GAEVENTS has grown into a nationally recognized leader in corporate event production, trusted by Fortune 500 companies, government agencies, and healthcare organizations.
+          </p>
+        </div>
       </div>
-      <p>© 2025 GAEVENTS Productions. All rights reserved.</p>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-[var(--color-gold)]" data-aos="fade-up">By The Numbers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="stat-card p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-number font-bold mb-2">500+</div>
+            <div class="text-gray-300 text-lg">Events Produced</div>
+          </div>
+          <div class="stat-card p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-number font-bold mb-2">2M+</div>
+            <div class="text-gray-300 text-lg">Attendees Reached</div>
+          </div>
+          <div class="stat-card p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-number font-bold mb-2">50+</div>
+            <div class="text-gray-300 text-lg">Major Cities</div>
+          </div>
+          <div class="stat-card p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+            <div class="stat-number font-bold mb-2">100%</div>
+            <div class="text-gray-300 text-lg">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-10 rounded-lg border-2 border-[var(--color-steel-blue)]" data-aos="fade-right">
+            <h3 class="text-3xl font-bold mb-6 text-[var(--color-gold)]">Our Mission</h3>
+            <p class="text-lg leading-relaxed text-gray-300">
+              To design and execute extraordinary events that engage audiences, convey messages powerfully, and inspire lasting impact. We turn strategic goals into unforgettable experiences through rigorous planning, creative innovation, and flawless execution.
+            </p>
+          </div>
+          <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-10 rounded-lg border-2 border-[var(--color-gold)]" data-aos="fade-left">
+            <h3 class="text-3xl font-bold mb-6 text-[var(--color-steel-blue)]">Our Vision</h3>
+            <p class="text-lg leading-relaxed text-gray-300">
+              To be the most trusted and innovative event production partner in North America, known for delivering excellence at every touchpoint and transforming how organizations connect with their audiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-[var(--color-gold)]" data-aos="fade-up">Our Journey</h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+            <div class="text-[var(--color-gold)] font-semibold text-lg mb-2">2018 - Foundation</div>
+            <p class="text-gray-300">GAEVENTS was founded in Dawsonville, GA, with a vision to revolutionize event production through cutting-edge technology and innovative design.</p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="text-[var(--color-gold)] font-semibold text-lg mb-2">2020 - National Expansion</div>
+            <p class="text-gray-300">Expanded operations to serve clients nationwide, establishing partnerships with major venues across 50+ cities.</p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+            <div class="text-[var(--color-gold)] font-semibold text-lg mb-2">2022 - Industry Leadership</div>
+            <p class="text-gray-300">Recognized as a leader in hybrid event production, successfully managing the transition to virtual and hybrid formats.</p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+            <div class="text-[var(--color-gold)] font-semibold text-lg mb-2">2025 - Today</div>
+            <p class="text-gray-300">Continuing to innovate with immersive technologies, AI-powered solutions, and sustainable event practices while maintaining our commitment to excellence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-[var(--color-gold)]" data-aos="fade-up">Our Core Values</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="value-card p-8 rounded-lg" data-aos="flip-left" data-aos-delay="100">
+            <div class="value-icon">🏆</div>
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Excellence</h3>
+            <p class="text-center text-gray-300">We pursue perfection in every detail, exceeding expectations and setting new industry standards for quality and execution.</p>
+          </div>
+          <div class="value-card p-8 rounded-lg" data-aos="flip-left" data-aos-delay="200">
+            <div class="value-icon">🎯</div>
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Integrity</h3>
+            <p class="text-center text-gray-300">We operate with unwavering honesty, transparency, and ethical standards in all our business relationships and decisions.</p>
+          </div>
+          <div class="value-card p-8 rounded-lg" data-aos="flip-left" data-aos-delay="300">
+            <div class="value-icon">💡</div>
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Innovation</h3>
+            <p class="text-center text-gray-300">We embrace cutting-edge technology and creative concepts to deliver experiences that push boundaries and captivate audiences.</p>
+          </div>
+          <div class="value-card p-8 rounded-lg" data-aos="flip-left" data-aos-delay="400">
+            <div class="value-icon">🤝</div>
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Partnership</h3>
+            <p class="text-center text-gray-300">We view every client as a collaborative partner, working together to achieve shared visions and measurable results.</p>
+          </div>
+          <div class="value-card p-8 rounded-lg" data-aos="flip-left" data-aos-delay="500">
+            <div class="value-icon">🛡️</div>
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Safety First</h3>
+            <p class="text-center text-gray-300">The safety of our clients, guests, and team is our highest priority, with rigorous protocols and industry-leading safety standards.</p>
+          </div>
+          <div class="value-card p-8 rounded-lg" data-aos="flip-left" data-aos-delay="600">
+            <div class="value-icon">⚡</div>
+            <h3 class="text-2xl font-bold mb-4 text-center text-[var(--color-gold)]">Agility</h3>
+            <p class="text-center text-gray-300">We adapt quickly to changing requirements and unexpected challenges, ensuring seamless execution under any circumstances.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-[var(--color-gold)]" data-aos="fade-up">Certifications & Achievements</h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-6 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="100">
+              <h4 class="text-xl font-bold mb-3 text-[var(--color-gold)]">ISO 9001 Certified</h4>
+              <p class="text-gray-300 text-sm">Quality management systems certification ensuring consistent excellence in all operations.</p>
+            </div>
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-6 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="200">
+              <h4 class="text-xl font-bold mb-3 text-[var(--color-gold)]">OSHA Compliant</h4>
+              <p class="text-gray-300 text-sm">Exceeding workplace safety standards with comprehensive safety protocols and training.</p>
+            </div>
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-6 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="300">
+              <h4 class="text-xl font-bold mb-3 text-[var(--color-gold)]">AVIXA Member</h4>
+              <p class="text-gray-300 text-sm">Professional association member with access to industry-leading technologies and best practices.</p>
+            </div>
+            <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-6 rounded-lg border border-[var(--color-steel-blue)]" data-aos="zoom-in" data-aos-delay="400">
+              <h4 class="text-xl font-bold mb-3 text-[var(--color-gold)]">ISO 14001 Certified</h4>
+              <p class="text-gray-300 text-sm">Environmental management certification for sustainable event practices and reduced carbon footprint.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center gap-3 mt-8">
+            <span class="badge">Event Solutions Provider</span>
+            <span class="badge">Hybrid Event Specialist</span>
+            <span class="badge">5-Star Rated</span>
+            <span class="badge">Veteran-Owned Business</span>
+            <span class="badge">Women in Events Member</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology & Expertise -->
+    <section class="py-20 section-background relative">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-[var(--color-gold)]" data-aos="fade-up">Cutting-Edge Technology</h2>
+        <div class="max-w-5xl mx-auto">
+          <p class="text-xl text-center text-gray-300 mb-12" data-aos="fade-up" data-aos-delay="100">
+            We leverage state-of-the-art equipment and industry-leading technologies to deliver exceptional experiences
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center p-6 bg-gradient-to-b from-[var(--color-steel-blue)]/10 to-transparent rounded-lg border border-[var(--color-steel-blue)]/20" data-aos="zoom-in" data-aos-delay="100">
+              <div class="text-4xl mb-3">🎥</div>
+              <h4 class="font-bold text-sm">4K/8K Production</h4>
+            </div>
+            <div class="text-center p-6 bg-gradient-to-b from-[var(--color-steel-blue)]/10 to-transparent rounded-lg border border-[var(--color-steel-blue)]/20" data-aos="zoom-in" data-aos-delay="200">
+              <div class="text-4xl mb-3">📡</div>
+              <h4 class="font-bold text-sm">Live Streaming</h4>
+            </div>
+            <div class="text-center p-6 bg-gradient-to-b from-[var(--color-steel-blue)]/10 to-transparent rounded-lg border border-[var(--color-steel-blue)]/20" data-aos="zoom-in" data-aos-delay="300">
+              <div class="text-4xl mb-3">🎨</div>
+              <h4 class="font-bold text-sm">AR/VR Experiences</h4>
+            </div>
+            <div class="text-center p-6 bg-gradient-to-b from-[var(--color-steel-blue)]/10 to-transparent rounded-lg border border-[var(--color-steel-blue)]/20" data-aos="zoom-in" data-aos-delay="400">
+              <div class="text-4xl mb-3">💻</div>
+              <h4 class="font-bold text-sm">AI Integration</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-[var(--color-steel-blue)] to-[var(--color-blue)] py-20" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-white">Ready to Work Together?</h2>
+        <p class="max-w-3xl mx-auto text-xl mb-10 text-white/90">
+          Let's discuss how GAEVENTS can bring your next event vision to life with innovation, precision, and excellence.
+        </p>
+        <a href="contact.html" 
+           class="inline-block bg-[var(--color-gold)] hover:bg-white text-black py-4 px-10 rounded-full font-bold text-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          Get Started Today
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-12 border-t border-gray-800" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">GAEVENTS</h3>
+          <address class="not-italic text-sm text-gray-400 leading-relaxed">
+            <p class="mb-2"><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
+            <p class="mb-2">190 FOUNDERS DR</p>
+            <p class="mb-2">DAWSONVILLE, GA 30534, USA</p>
+            <p class="mb-2">
+              <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors">
+                info@gaeventsprod.com
+              </a>
+            </p>
+          </address>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="index.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Home</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">About Us</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Services</a></li>
+              <li><a href="clients.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Clients</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Legal -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)]">Legal</h3>
+          <nav aria-label="Legal navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Terms & Conditions</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Privacy Policy</a></li>
+              <li><a href="refund.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors">Refund Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; <span id="currentYear">2025</span> GAEVENTS PRODUCTION LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+  
+  <!-- Scripts -->
+  <script src="components/init.js"></script>
 </body>
 </html>
