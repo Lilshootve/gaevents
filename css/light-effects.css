@@ -2,7 +2,13 @@
 
 body {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+html {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
 }
 
 /* Animated Light Particles Background */
