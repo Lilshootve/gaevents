@@ -62,115 +62,230 @@
       font-family: 'Sora', sans-serif;
       color: var(--color-white);
       background-color: var(--color-black);
+      position: relative;
+      overflow-x: hidden;
     }
     h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
     }
 
-    /* Tabs */
-    .sector-tab {
-      background-color: var(--color-gray);
-      border: 2px solid transparent;
-      transition: all 0.3s ease;
-      cursor: pointer;
+    /* Animated Light Particles Background */
+    .light-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
     }
-    .sector-tab:hover {
-      background-color: var(--color-charcoal);
-      border-color: var(--color-steel-blue);
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: radial-gradient(circle, var(--color-gold) 0%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float 8s ease-in-out infinite;
     }
-    .sector-tab.active {
-      background: linear-gradient(135deg, var(--color-steel-blue), var(--color-blue));
-      border-color: var(--color-gold);
-      color: var(--color-white);
-      box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+    .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 6s; }
+    .particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 8s; }
+    .particle:nth-child(3) { left: 30%; animation-delay: 2s; animation-duration: 7s; }
+    .particle:nth-child(4) { left: 40%; animation-delay: 0.5s; animation-duration: 9s; }
+    .particle:nth-child(5) { left: 50%; animation-delay: 1.5s; animation-duration: 10s; }
+    .particle:nth-child(6) { left: 60%; animation-delay: 3s; animation-duration: 6s; }
+    .particle:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 8s; }
+    .particle:nth-child(8) { left: 80%; animation-delay: 1s; animation-duration: 7s; }
+    .particle:nth-child(9) { left: 90%; animation-delay: 4s; animation-duration: 9s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
+      10% { opacity: 0.6; }
+      50% { opacity: 1; }
+      90% { opacity: 0.6; }
+      100% { transform: translateY(-100vh) scale(1); opacity: 0; }
     }
 
-    /* Testimonial Carousel */
+    /* Glowing Light Beams */
+    .light-beam {
+      position: absolute;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      background: linear-gradient(180deg, 
+        transparent 0%, 
+        rgba(218, 165, 32, 0.05) 20%, 
+        rgba(70, 130, 180, 0.08) 50%, 
+        rgba(218, 165, 32, 0.05) 80%, 
+        transparent 100%
+      );
+      animation: beam-sweep 20s linear infinite;
+    }
+    .light-beam:nth-child(1) { left: 0; animation-delay: 0s; }
+    .light-beam:nth-child(2) { left: 33%; animation-delay: -7s; }
+    .light-beam:nth-child(3) { left: 66%; animation-delay: -14s; }
+    @keyframes beam-sweep {
+      0% { transform: translateX(-100px) skewX(-20deg); opacity: 0; }
+      10%, 90% { opacity: 1; }
+      100% { transform: translateX(calc(100vw + 100px)) skewX(-20deg); opacity: 0; }
+    }
+
+    /* Main Content Above Particles */
+    main, header, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Enhanced Tabs */
+    .sector-tab {
+      background: linear-gradient(145deg, rgba(54, 69, 79, 0.8), rgba(31, 31, 31, 0.9));
+      border: 2px solid rgba(70, 130, 180, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .sector-tab:hover {
+      background: linear-gradient(145deg, rgba(70, 130, 180, 0.4), rgba(54, 69, 79, 0.6));
+      border-color: rgba(218, 165, 32, 0.6);
+      box-shadow: 0 6px 20px rgba(218, 165, 32, 0.2);
+      transform: translateY(-2px);
+    }
+    .sector-tab.active {
+      background: linear-gradient(135deg, rgba(70, 130, 180, 0.9), rgba(0, 92, 153, 0.95));
+      border: 2px solid var(--color-gold);
+      color: var(--color-white);
+      box-shadow: 0 8px 30px rgba(218, 165, 32, 0.4), 
+                  0 0 20px rgba(70, 130, 180, 0.3);
+      transform: scale(1.05);
+    }
+
+    /* Enhanced Testimonial Carousel */
     .testimonial-carousel-container {
-      background: linear-gradient(135deg, var(--color-charcoal), var(--color-gray));
-      border: 1px solid rgba(218, 165, 32, 0.2);
+      background: linear-gradient(145deg, 
+        rgba(54, 69, 79, 0.95) 0%, 
+        rgba(31, 31, 31, 0.98) 50%,
+        rgba(15, 23, 42, 0.95) 100%
+      );
+      border: 2px solid rgba(218, 165, 32, 0.3);
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 0 60px rgba(70, 130, 180, 0.1),
+        0 0 40px rgba(218, 165, 32, 0.1);
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-carousel-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(218, 165, 32, 0.05) 0%, transparent 50%);
+      animation: rotate-light 20s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes rotate-light {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     .testimonial-quote {
       font-size: 1.25rem;
       line-height: 1.8;
       font-style: italic;
       color: var(--color-white);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
     .carousel-button {
-      background-color: var(--color-steel-blue);
-      border: none;
+      background: linear-gradient(135deg, var(--color-steel-blue), var(--color-blue));
+      border: 2px solid rgba(218, 165, 32, 0.3);
+      box-shadow: 0 4px 15px rgba(70, 130, 180, 0.4);
       transition: all 0.3s ease;
       cursor: pointer;
     }
     .carousel-button:hover {
-      background-color: var(--color-gold);
-      transform: scale(1.1);
+      background: linear-gradient(135deg, var(--color-gold), #FFD700);
+      border-color: var(--color-gold);
+      box-shadow: 0 6px 25px rgba(218, 165, 32, 0.6);
+      transform: scale(1.15);
     }
     .carousel-button:active {
-      transform: scale(0.95);
+      transform: scale(0.9);
     }
     .indicator {
       width: 12px;
       height: 12px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.3);
-      border: none;
+      border: 2px solid rgba(70, 130, 180, 0.5);
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .indicator.active {
-      background-color: var(--color-gold);
-      width: 24px;
-      border-radius: 6px;
-    }
-
-    /* Case Studies */
-    .case-study-card {
-      background: linear-gradient(135deg, var(--color-gray), var(--color-charcoal));
-      border: 1px solid rgba(218, 165, 32, 0.2);
-      transition: all 0.3s ease;
-    }
-    .case-study-card:hover {
-      border-color: var(--color-steel-blue);
-      box-shadow: 0 8px 24px rgba(0, 92, 153, 0.3);
-      transform: translateY(-4px);
-    }
-    .case-study-title {
-      color: var(--color-gold);
-    }
-    .section-title {
-      color: var(--color-steel-blue);
-      font-family: 'Orbitron', sans-serif;
-    }
-    .service-tag {
-      background-color: var(--color-steel-blue);
-      color: var(--color-white);
-    }
-    .results-list li {
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    .results-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--color-gold);
-      font-weight: bold;
+      background: radial-gradient(circle, var(--color-gold), #FFD700);
+      width: 32px;
+      border-radius: 8px;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 15px rgba(218, 165, 32, 0.8);
     }
 
     /* Author Info */
     .author-name {
       color: var(--color-gold);
       font-weight: 600;
+      text-shadow: 0 2px 8px rgba(218, 165, 32, 0.3);
     }
     .author-company {
       color: var(--color-steel-blue);
       font-weight: 500;
+      text-shadow: 0 2px 8px rgba(70, 130, 180, 0.3);
+    }
+
+    /* Enhanced Section Backgrounds */
+    .section-background {
+      background: linear-gradient(180deg, 
+        rgba(14, 14, 14, 0.95) 0%,
+        rgba(31, 31, 31, 0.92) 100%
+      );
+      position: relative;
+      overflow: hidden;
+    }
+    .section-background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(70, 130, 180, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 50%);
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
+  <!-- Animated Light Particles Background -->
+  <div class="light-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <!-- Glowing Light Beams -->
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  
   <!-- Skip Link for Accessibility -->
   <a href="#main-content" id="skip-link" class="sr-only focus:not-sr-only">Skip to main content</a>
   
@@ -220,32 +335,32 @@
   <!-- Main Content -->
   <main id="main-content" role="main">
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-[var(--color-charcoal)] to-[var(--color-gray)] py-16 border-b-2 border-[var(--color-gold)]" role="region" aria-label="Clients Hero">
-      <div class="container mx-auto px-4">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-center text-[var(--color-gold)]" data-aos="fade-up">Trusted Partners Across Industries</h1>
-        <p class="max-w-3xl mx-auto text-center text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">We deliver world-class event production for Technology, Government, and Healthcare organizations nationwide.</p>
+    <section class="section-background py-20 border-b-2 border-[var(--color-gold)] relative" role="region" aria-label="Clients Hero">
+      <div class="container mx-auto px-4 relative z-10">
+        <h1 class="text-5xl sm:text-6xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gold)] via-[var(--color-steel-blue)] to-[var(--color-gold)]" data-aos="fade-up">Trusted Partners Across Industries</h1>
+        <p class="max-w-3xl mx-auto text-center text-xl text-gray-200" data-aos="fade-up" data-aos-delay="100">We deliver world-class event production for Technology, Government, and Healthcare organizations nationwide.</p>
       </div>
     </section>
 
     <!-- Sector Tabs -->
-    <section class="py-8 bg-[var(--color-black)]" role="region" aria-label="Sector Navigation">
-      <div class="container mx-auto px-4">
+    <section class="section-background py-10 relative" role="region" aria-label="Sector Navigation">
+      <div class="container mx-auto px-4 relative z-10">
         <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           <button class="sector-tab active px-8 py-4 rounded-lg font-semibold text-white" data-sector="Technology">
-            <i class="fas fa-microchip mr-2"></i> Technology
+            🏢 Technology
           </button>
           <button class="sector-tab px-8 py-4 rounded-lg font-semibold text-white" data-sector="Government">
-            <i class="fas fa-landmark mr-2"></i> Government
+            🏛️ Government
           </button>
           <button class="sector-tab px-8 py-4 rounded-lg font-semibold text-white" data-sector="Healthcare">
-            <i class="fas fa-heartbeat mr-2"></i> Healthcare
+            ⚕️ Healthcare
           </button>
         </div>
       </div>
     </section>
 
     <!-- Testimonials Carousel -->
-    <section class="py-16 bg-[var(--color-black)]" role="region" aria-label="Testimonials">
+    <section class="section-background py-20 relative" role="region" aria-label="Testimonials">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-8 text-center text-[var(--color-gold)]">What Our Clients Say</h2>
         
@@ -272,17 +387,6 @@
               </svg>
             </button>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section class="py-16 bg-[var(--color-black)]" role="region" aria-label="Case Studies">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--color-gold)]">Success Stories</h2>
-        <div id="case-studies-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <!-- Case studies will be loaded here by JavaScript -->
-          <div class="text-center text-gray-400 col-span-full">Loading case studies...</div>
         </div>
       </div>
     </section>

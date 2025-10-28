@@ -3,7 +3,6 @@
   'use strict';
 
   let testimonialsData = [];
-  let caseStudiesData = [];
   let currentSector = 'Technology';
   let currentTestimonialIndex = 0;
   let autoRotateInterval = null;
@@ -15,9 +14,6 @@
     try {
       const testimonialsResponse = await fetch('assets/data/testimonials.json');
       testimonialsData = await testimonialsResponse.json();
-
-      const caseStudiesResponse = await fetch('assets/data/case_studies.json');
-      caseStudiesData = await caseStudiesResponse.json();
 
       initPage();
     } catch (error) {
@@ -34,9 +30,6 @@
 
     // Initialize carousel
     initCarousel();
-
-    // Initialize case studies
-    renderCaseStudies();
 
     // Load testimonials for initial sector
     updateTestimonialsForSector(currentSector);
@@ -74,7 +67,6 @@
 
     // Update content
     updateTestimonialsForSector(sector);
-    renderCaseStudies();
     resetCarousel();
   }
 
@@ -253,68 +245,6 @@
       clearInterval(autoRotateInterval);
     }
     startAutoRotate();
-  }
-
-  /**
-   * Render case studies
-   */
-  function renderCaseStudies() {
-    const container = document.getElementById('case-studies-grid');
-    if (!container) return;
-
-    const sectorCaseStudies = caseStudiesData.caseStudies.filter(
-      cs => cs.sector === currentSector
-    );
-
-    if (sectorCaseStudies.length === 0) {
-      container.innerHTML = '<p class="text-center text-gray-400">No case studies available for this sector.</p>';
-      return;
-    }
-
-    container.innerHTML = sectorCaseStudies.map(cs => `
-      <div class="case-study-card">
-        <div class="case-study-header">
-          <h3 class="case-study-title">${cs.title}</h3>
-          <div class="case-study-meta">
-            <span class="case-study-event">${cs.event}</span>
-            <span class="case-study-location">${cs.location}</span>
-          </div>
-        </div>
-        <div class="case-study-content">
-          <div class="case-study-details">
-            <div class="detail-item">
-              <strong>Client:</strong> ${cs.client}
-            </div>
-            <div class="detail-item">
-              <strong>Attendees:</strong> ${cs.attendees}
-            </div>
-            <div class="detail-item">
-              <strong>Duration:</strong> ${cs.duration}
-            </div>
-          </div>
-          <div class="case-study-section">
-            <h4 class="section-title">Challenge</h4>
-            <p>${cs.challenge}</p>
-          </div>
-          <div class="case-study-section">
-            <h4 class="section-title">Solution</h4>
-            <p>${cs.solution}</p>
-          </div>
-          <div class="case-study-section">
-            <h4 class="section-title">Results</h4>
-            <ul class="results-list">
-              ${cs.results.map(r => `<li>${r}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="case-study-services">
-            <h4 class="section-title">Services Provided</h4>
-            <div class="services-tags">
-              ${cs.services.map(s => `<span class="service-tag">${s}</span>`).join('')}
-            </div>
-          </div>
-        </div>
-      </div>
-    `).join('');
   }
 
   // Initialize when DOM is ready
