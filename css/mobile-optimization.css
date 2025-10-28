@@ -31,6 +31,9 @@ img, video, iframe {
   /* Optimize stat numbers for mobile */
   .stat-number {
     font-size: 2.5rem !important;
+    -webkit-text-fill-color: var(--color-gold) !important;
+    background: none !important;
+    color: var(--color-gold) !important;
   }
   
   /* Reduce section padding on mobile */
