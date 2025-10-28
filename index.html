@@ -46,6 +46,7 @@
   
   <!-- Main Styles -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/light-effects.css">
   
   <!-- Define our colour palette and fonts -->
   <style>
@@ -96,6 +97,24 @@
   </script>
 </head>
 <body>
+  <!-- Animated Light Particles Background -->
+  <div class="light-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <!-- Glowing Light Beams -->
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  
   <!-- Skip Link for Accessibility -->
   <a href="#main-content" id="skip-link" class="sr-only focus:not-sr-only">Skip to main content</a>
   
@@ -159,7 +178,7 @@
     </section>
 
     <!-- About summary -->
-    <section class="bg-[var(--color-gray)] py-16" role="region" aria-label="About section" data-aos="fade-up">
+    <section class="section-background py-16" role="region" aria-label="About section" data-aos="fade-up">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-6 text-[var(--color-gold)]">Who We Are</h2>
         <p class="max-w-3xl text-lg leading-relaxed">GAEVENTS is a full‑service event production company headquartered in Dawsonville, GA and serving clients nationwide. Our team of creative professionals, technicians and logistics specialists bring decades of experience to every project. We partner with corporate, government and agency clients to turn strategic goals into extraordinary live, virtual and hybrid events.</p>
@@ -167,7 +186,7 @@
     </section>
 
     <!-- Services summary section -->
-    <section class="py-16" role="region" aria-label="Services section" data-aos="fade-up">
+    <section class="section-background py-16" role="region" aria-label="Services section" data-aos="fade-up">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-8 text-[var(--color-gold)]">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

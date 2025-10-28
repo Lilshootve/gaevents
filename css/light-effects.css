@@ -1,0 +1,107 @@
+/* Light Effects - Animated particles and beams for event production theme */
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated Light Particles Background */
+.light-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, var(--color-gold) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float 8s ease-in-out infinite;
+}
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 6s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 8s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 2s; animation-duration: 7s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 0.5s; animation-duration: 9s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 1.5s; animation-duration: 10s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 3s; animation-duration: 6s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 8s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 1s; animation-duration: 7s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 4s; animation-duration: 9s; }
+@keyframes float {
+  0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 0.6; }
+  50% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+}
+
+/* Glowing Light Beams */
+.light-beam {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(218, 165, 32, 0.05) 20%, 
+    rgba(70, 130, 180, 0.08) 50%, 
+    rgba(218, 165, 32, 0.05) 80%, 
+    transparent 100%
+  );
+  animation: beam-sweep 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.light-beam:nth-child(1) { left: 0; animation-delay: 0s; }
+.light-beam:nth-child(2) { left: 33%; animation-delay: -7s; }
+.light-beam:nth-child(3) { left: 66%; animation-delay: -14s; }
+@keyframes beam-sweep {
+  0% { transform: translateX(-100px) skewX(-20deg); opacity: 0; }
+  10%, 90% { opacity: 1; }
+  100% { transform: translateX(calc(100vw + 100px)) skewX(-20deg); opacity: 0; }
+}
+
+/* Ensure content layers above particles */
+main, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced Section Backgrounds */
+.section-background {
+  background: linear-gradient(180deg, 
+    rgba(14, 14, 14, 0.95) 0%,
+    rgba(31, 31, 31, 0.92) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+.section-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(70, 130, 180, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .particle,
+  .light-beam {
+    animation: none !important;
+  }
+}
+
