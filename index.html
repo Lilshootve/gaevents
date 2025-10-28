@@ -59,22 +59,10 @@
       --color-white: #F5F5F5;
     }
     
-    /* Stat numbers styling */
+    /* Stat numbers styling - ALWAYS GOLD COLOR */
     .stat-number {
-      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-steel-blue) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: var(--color-gold);
-    }
-    
-    @media (max-width: 640px) {
-      .stat-number {
-        -webkit-text-fill-color: var(--color-gold);
-        background: none;
-        color: var(--color-gold) !important;
-        text-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
-      }
+      color: var(--color-gold) !important;
+      text-shadow: 0 0 20px rgba(218, 165, 32, 0.5), 0 2px 8px rgba(0, 0, 0, 0.5);
     }
     body {
       font-family: 'Sora', sans-serif;
