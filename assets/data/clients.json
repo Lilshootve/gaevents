@@ -1,0 +1,88 @@
+{
+  "clients": [
+    {
+      "name": "MetroTech Solutions",
+      "sector": "Technology",
+      "industry": "Enterprise Software",
+      "location": "San Francisco, CA"
+    },
+    {
+      "name": "Wexford Global",
+      "sector": "Technology",
+      "industry": "Cloud Infrastructure",
+      "location": "Austin, TX"
+    },
+    {
+      "name": "BrightCore Systems",
+      "sector": "Technology",
+      "industry": "Hardware Manufacturing",
+      "location": "Seattle, WA"
+    },
+    {
+      "name": "BlueStar Technologies",
+      "sector": "Technology",
+      "industry": "Mobile Development",
+      "location": "Boston, MA"
+    },
+    {
+      "name": "ISX Innovations",
+      "sector": "Technology",
+      "industry": "Security Software",
+      "location": "Chicago, IL"
+    },
+    {
+      "name": "GA Office of Workforce",
+      "sector": "Government",
+      "industry": "State Government",
+      "location": "Atlanta, GA"
+    },
+    {
+      "name": "City Events Division",
+      "sector": "Government",
+      "industry": "Municipal Services",
+      "location": "New York, NY"
+    },
+    {
+      "name": "State Facilities Office",
+      "sector": "Government",
+      "industry": "Public Administration",
+      "location": "Sacramento, CA"
+    },
+    {
+      "name": "Civic Communications Bureau",
+      "sector": "Government",
+      "industry": "Public Affairs",
+      "location": "Washington, DC"
+    },
+    {
+      "name": "UnitedCare Health",
+      "sector": "Healthcare",
+      "industry": "Health Insurance",
+      "location": "Minneapolis, MN"
+    },
+    {
+      "name": "NovaTech Healthcare",
+      "sector": "Healthcare",
+      "industry": "Medical Devices",
+      "location": "Philadelphia, PA"
+    },
+    {
+      "name": "National Health Alliance",
+      "sector": "Healthcare",
+      "industry": "Health Education",
+      "location": "Durham, NC"
+    },
+    {
+      "name": "GateHouse Medical",
+      "sector": "Healthcare",
+      "industry": "Hospital System",
+      "location": "Houston, TX"
+    },
+    {
+      "name": "MedBridge Institute",
+      "sector": "Healthcare",
+      "industry": "Medical Training",
+      "location": "Denver, CO"
+    }
+  ]
+}

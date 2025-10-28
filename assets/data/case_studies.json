@@ -1,0 +1,58 @@
+{
+  "caseStudies": [
+    {
+      "id": 1,
+      "sector": "Technology",
+      "title": "ISX Innovations Product Launch",
+      "client": "ISX Innovations",
+      "event": "High-Security Product Launch Conference",
+      "location": "Las Vegas, NV",
+      "attendees": "1,200",
+      "duration": "2 days",
+      "challenge": "Organize a secure product reveal for high-value clients while maintaining rigorous security protocols and seamless technical execution.",
+      "solution": "Implemented multi-layer security coordination, custom LED display configuration for proprietary content delivery, and real-time encrypted live streaming to remote offices.",
+      "results": [
+        "Zero security incidents throughout the event",
+        "99.8% uptime for streaming connections",
+        "100% client satisfaction rating"
+      ],
+      "services": ["Technical Staging", "LED Wall Production", "Live Streaming", "Security Coordination"]
+    },
+    {
+      "id": 2,
+      "sector": "Government",
+      "title": "Statewide Workforce Summit",
+      "client": "GA Office of Workforce",
+      "event": "Annual Workforce Development Summit",
+      "location": "Atlanta, GA",
+      "attendees": "3,500",
+      "duration": "3 days",
+      "challenge": "Coordinate a multi-agency statewide summit with strict compliance requirements, ADA accessibility standards, and live interpretation services.",
+      "solution": "Deployed comprehensive event management including full accessibility infrastructure, simultaneous interpretation, secure documentation protocols, and cross-agency logistics coordination.",
+      "results": [
+        "Ahead-of-schedule delivery with zero incidents",
+        "100% ADA compliance verified",
+        "Successful collaboration across 12 state agencies"
+      ],
+      "services": ["Full Event Production", "Accessibility Services", "Security", "Logistics Management"]
+    },
+    {
+      "id": 3,
+      "sector": "Healthcare",
+      "title": "Advanced Surgical Education Symposium",
+      "client": "NovaTech Healthcare",
+      "event": "Hybrid Medical Training Conference",
+      "location": "Chicago, IL",
+      "attendees": "800 (in-person) + 2,400 (virtual)",
+      "duration": "4 days",
+      "challenge": "Deliver premium AV quality for complex surgical demonstrations in a hybrid format with simultaneous live streaming to 45 remote clinics while maintaining strict privacy protocols.",
+      "solution": "Installed broadcast-grade 4K camera systems with surgical detail enhancement, dedicated streaming infrastructure for healthcare-grade encryption, and privacy-compliant zone management.",
+      "results": [
+        "Seamless hybrid experience for all participants",
+        "Zero privacy protocol violations",
+        "2.4K+ remote attendees achieved 98% session completion rate"
+      ],
+      "services": ["Hybrid Event Production", "Broadcast AV", "Privacy Management", "Technical Engineering"]
+    }
+  ]
+}

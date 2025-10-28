@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebSite">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clients | GAEVENTS</title>
+  <meta name="description" content="GAEVENTS - Clients & Testimonials. Trusted by Technology, Government, and Healthcare sectors for world-class event production.">
+  <meta name="keywords" content="event production clients, corporate event testimonials, technology events, government events, healthcare events, case studies">
+  <meta name="author" content="GAEVENTS PRODUCTION LLC">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaeventsprod.com/clients.html">
+  <meta property="og:title" content="Clients & Testimonials | GAEVENTS">
+  <meta property="og:description" content="Trusted by Technology, Government, and Healthcare sectors for world-class event production.">
+  <meta property="og:image" content="https://gaeventsprod.com/images/hero.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gaeventsprod.com/clients.html">
+  <meta property="twitter:title" content="Clients & Testimonials | GAEVENTS">
+  <meta property="twitter:description" content="Trusted by Technology, Government, and Healthcare sectors for world-class event production.">
+  <meta property="twitter:image" content="https://gaeventsprod.com/images/hero.jpg">
+  
+  <title>Clients & Testimonials | GAEVENTS</title>
+  <link rel="canonical" href="https://gaeventsprod.com/clients.html">
   
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -12,8 +32,22 @@
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
   <link rel="manifest" href="images/favicon/site.webmanifest">
   
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts with font-display: swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Define our colour palette and fonts -->
   <style>
     :root {
       --color-black: #0E0E0E;
@@ -21,67 +55,305 @@
       --color-blue: #005C99;
       --color-gold: #DAA520;
       --color-white: #F5F5F5;
+      --color-steel-blue: #4682B4;
+      --color-charcoal: #36454F;
     }
     body {
       font-family: 'Sora', sans-serif;
       color: var(--color-white);
       background-color: var(--color-black);
     }
-    h1, h2 {
+    h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Tabs */
+    .sector-tab {
+      background-color: var(--color-gray);
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .sector-tab:hover {
+      background-color: var(--color-charcoal);
+      border-color: var(--color-steel-blue);
+    }
+    .sector-tab.active {
+      background: linear-gradient(135deg, var(--color-steel-blue), var(--color-blue));
+      border-color: var(--color-gold);
+      color: var(--color-white);
+      box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+    }
+
+    /* Testimonial Carousel */
+    .testimonial-carousel-container {
+      background: linear-gradient(135deg, var(--color-charcoal), var(--color-gray));
+      border: 1px solid rgba(218, 165, 32, 0.2);
+    }
+    .testimonial-quote {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      font-style: italic;
+      color: var(--color-white);
+    }
+    .carousel-button {
+      background-color: var(--color-steel-blue);
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .carousel-button:hover {
+      background-color: var(--color-gold);
+      transform: scale(1.1);
+    }
+    .carousel-button:active {
+      transform: scale(0.95);
+    }
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .indicator.active {
+      background-color: var(--color-gold);
+      width: 24px;
+      border-radius: 6px;
+    }
+
+    /* Case Studies */
+    .case-study-card {
+      background: linear-gradient(135deg, var(--color-gray), var(--color-charcoal));
+      border: 1px solid rgba(218, 165, 32, 0.2);
+      transition: all 0.3s ease;
+    }
+    .case-study-card:hover {
+      border-color: var(--color-steel-blue);
+      box-shadow: 0 8px 24px rgba(0, 92, 153, 0.3);
+      transform: translateY(-4px);
+    }
+    .case-study-title {
+      color: var(--color-gold);
+    }
+    .section-title {
+      color: var(--color-steel-blue);
+      font-family: 'Orbitron', sans-serif;
+    }
+    .service-tag {
+      background-color: var(--color-steel-blue);
+      color: var(--color-white);
+    }
+    .results-list li {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .results-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-gold);
+      font-weight: bold;
+    }
+
+    /* Author Info */
+    .author-name {
+      color: var(--color-gold);
+      font-weight: 600;
+    }
+    .author-company {
+      color: var(--color-steel-blue);
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
-  <header class="bg-gray-900 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <div class="text-xl font-bold text-white">
-        <a href="index.html" class="hover:text-[var(--color-gold)]">GAEVENTS</a>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" id="skip-link" class="sr-only focus:not-sr-only">Skip to main content</a>
+  
+  <!-- Header Component -->
+  <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95" role="banner">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="text-xl font-bold text-white" itemscope itemtype="https://schema.org/Organization">
+        <a href="index.html" class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded" aria-label="GAEVENTS Home" itemprop="name">GAEVENTS</a>
       </div>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="about.html" class="hover:text-[var(--color-gold)]">About</a></li>
-          <li><a href="services.html" class="hover:text-[var(--color-gold)]">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-[var(--color-gold)]">Gallery</a></li>
-          <li><a href="clients.html" class="text-[var(--color-gold)]">Clients</a></li>
-          <li><a href="contact.html" class="hover:text-[var(--color-gold)]">Contact</a></li>
+      <nav aria-label="Main navigation">
+        <ul class="flex flex-wrap gap-2 sm:gap-4" role="list">
+          <li>
+            <a href="index.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Home</a>
+          </li>
+          <li>
+            <a href="about.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">About</a>
+          </li>
+          <li>
+            <a href="services.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Services</a>
+          </li>
+          <li>
+            <a href="gallery.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Gallery</a>
+          </li>
+          <li>
+            <a href="clients.html" 
+               class="text-[var(--color-gold)] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="page">Clients</a>
+          </li>
+          <li>
+            <a href="contact.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="bg-[var(--color-gray)] py-16">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">Clients & Testimonials</h1>
-      <p class="max-w-3xl text-lg mb-8">We are proud to collaborate with leading organizations across industries. Here are a few words from our partners:</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Fortune 500 Tech Company</h3>
-          <p class="text-sm italic mb-2">"GAEVENTS delivered a flawless conference for our executives and partners. Their attention to detail and professionalism were outstanding."</p>
-          <p class="text-[var(--color-blue)] font-semibold">– Head of Global Events</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Federal Agency</h3>
-          <p class="text-sm italic mb-2">"The GAEVENTS team managed our multi‑day summit seamlessly. Logistics, security and technology were executed to perfection."</p>
-          <p class="text-[var(--color-blue)] font-semibold">– Operations Director</p>
-        </div>
-        <div class="bg-[var(--color-black)] p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Luxury Automotive Brand</h3>
-          <p class="text-sm italic mb-2">"Our product launch event was spectacular. The immersive experience created by GAEVENTS surpassed our expectations and delighted our guests."</p>
-          <p class="text-[var(--color-blue)] font-semibold">– Marketing Manager</p>
-        </div>
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[var(--color-charcoal)] to-[var(--color-gray)] py-16 border-b-2 border-[var(--color-gold)]" role="region" aria-label="Clients Hero">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-center text-[var(--color-gold)]" data-aos="fade-up">Trusted Partners Across Industries</h1>
+        <p class="max-w-3xl mx-auto text-center text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">We deliver world-class event production for Technology, Government, and Healthcare organizations nationwide.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="bg-gray-900 py-8">
-    <div class="container mx-auto px-4 text-center text-sm">
-      <div class="mb-4">
-        <a href="terms.html" class="mr-4 hover:text-[var(--color-gold)]">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-[var(--color-gold)]">Privacy Policy</a>
+    <!-- Sector Tabs -->
+    <section class="py-8 bg-[var(--color-black)]" role="region" aria-label="Sector Navigation">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          <button class="sector-tab active px-8 py-4 rounded-lg font-semibold text-white" data-sector="Technology">
+            <i class="fas fa-microchip mr-2"></i> Technology
+          </button>
+          <button class="sector-tab px-8 py-4 rounded-lg font-semibold text-white" data-sector="Government">
+            <i class="fas fa-landmark mr-2"></i> Government
+          </button>
+          <button class="sector-tab px-8 py-4 rounded-lg font-semibold text-white" data-sector="Healthcare">
+            <i class="fas fa-heartbeat mr-2"></i> Healthcare
+          </button>
+        </div>
       </div>
-      <p>© 2025 GAEVENTS Productions. All rights reserved.</p>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="py-16 bg-[var(--color-black)]" role="region" aria-label="Testimonials">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--color-gold)]">What Our Clients Say</h2>
+        
+        <div id="testimonial-carousel" class="testimonial-carousel-container rounded-lg p-8 md:p-12 max-w-4xl mx-auto">
+          <div id="testimonial-content" class="min-h-[200px]">
+            <!-- Testimonials will be loaded here by JavaScript -->
+            <div class="text-center text-gray-400">Loading testimonials...</div>
+          </div>
+          
+          <div class="flex items-center justify-between mt-8">
+            <button id="testimonial-prev" class="carousel-button w-12 h-12 rounded-full flex items-center justify-center text-white" aria-label="Previous testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            <div class="carousel-indicators flex gap-2 justify-center">
+              <!-- Indicators will be added by JavaScript -->
+            </div>
+            
+            <button id="testimonial-next" class="carousel-button w-12 h-12 rounded-full flex items-center justify-center text-white" aria-label="Next testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-16 bg-[var(--color-black)]" role="region" aria-label="Case Studies">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--color-gold)]">Success Stories</h2>
+        <div id="case-studies-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Case studies will be loaded here by JavaScript -->
+          <div class="text-center text-gray-400 col-span-full">Loading case studies...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="bg-gradient-to-r from-[var(--color-steel-blue)] to-[var(--color-blue)] py-16" role="region" aria-label="Call to action">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Ready to Create Your Next Event?</h2>
+        <p class="max-w-2xl mx-auto text-lg mb-8 text-white/90">Join hundreds of successful organizations who trust GAEVENTS to deliver exceptional experiences. Request a quote today.</p>
+        <a href="contact.html" 
+           class="inline-block bg-[var(--color-gold)] hover:bg-white text-black py-4 px-8 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent text-lg"
+           aria-label="Request a quote">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-12 border-t border-gray-800" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)] font-sans">GAEVENTS</h3>
+          <address class="not-italic text-sm text-gray-400 leading-relaxed">
+            <p class="mb-2"><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
+            <p class="mb-2">190 FOUNDERS DR</p>
+            <p class="mb-2">DAWSONVILLE, GA 30534, USA</p>
+            <p class="mb-2">
+              <a href="mailto:info@gaeventsprod.com" 
+                 class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded"
+                 aria-label="Email GAEVENTS">info@gaeventsprod.com</a>
+            </p>
+          </address>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)] font-sans">Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">About Us</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Our Services</a></li>
+              <li><a href="gallery.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Gallery</a></li>
+              <li><a href="clients.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Clients</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Legal -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-[var(--color-gold)] font-sans">Legal</h3>
+          <nav aria-label="Legal navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Terms & Conditions</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Privacy Policy</a></li>
+              <li><a href="refund.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Refund Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; <span id="currentYear">2025</span> GAEVENTS PRODUCTION LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+  
+  <!-- Scripts -->
+  <script src="components/init.js"></script>
+  <script src="assets/js/clients.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+{
+  "testimonials": [
+    {"id": 1, "sector": "Technology", "quote": "Flawless execution from start to finish. Our leadership team was truly impressed.", "name": "Karen Brooks", "title": "Events Director", "company": "MetroTech Solutions"},
+    {"id": 2, "sector": "Technology", "quote": "Their technical staging elevated our entire conference experience.", "name": "Daniel Ruiz", "title": "Senior Producer", "company": "Bold Agency"},
+    {"id": 3, "sector": "Technology", "quote": "Reliable, responsive, and focused on the details that matter.", "name": "Emily Chen", "title": "Corporate Affairs Manager", "company": "Wexford Global"},
+    {"id": 4, "sector": "Technology", "quote": "We've worked with many event companies—GAEVENTS stands out for professionalism.", "name": "Anthony Miles", "title": "COO", "company": "BrightCore Systems"},
+    {"id": 5, "sector": "Technology", "quote": "The LED wall content delivery was flawless from keynote to demos.", "name": "Tara Williams", "title": "Brand Manager", "company": "BlueStar Technologies"},
+    {"id": 6, "sector": "Technology", "quote": "We trusted them with a high-security product reveal, and they nailed it.", "name": "Natalie Carter", "title": "Senior Advisor", "company": "ISX Innovations"},
+    {"id": 7, "sector": "Technology", "quote": "Every session looked and sounded incredible.", "name": "Laura Bennett", "title": "Program Manager", "company": "NovaTech Inc."},
+    {"id": 8, "sector": "Technology", "quote": "Strong communication and smooth coordination with our vendors.", "name": "Jacob Fisher", "title": "Venue Manager", "company": "Midtown Hall"},
+    {"id": 9, "sector": "Technology", "quote": "Fast setup, clear briefings, and organized backstage management.", "name": "Justin Phillips", "title": "Technical Director", "company": "StageRight Partners"},
+    {"id": 10, "sector": "Technology", "quote": "A reliable partner for nationwide product launches.", "name": "Brian Young", "title": "Chief Communications Officer", "company": "SilverLine Media"},
+
+    {"id": 11, "sector": "Government", "quote": "Professional, calm, and resourceful under pressure.", "name": "Mark Howard", "title": "Public Sector Coordinator", "company": "GA Office of Workforce"},
+    {"id": 12, "sector": "Government", "quote": "Excellent crowd flow and access control throughout the venue.", "name": "Isabella Reyes", "title": "Security Coordinator", "company": "City Events Division"},
+    {"id": 13, "sector": "Government", "quote": "A reliable partner for statewide productions.", "name": "Chris Delgado", "title": "Senior Logistics Planner", "company": "TransPro Holdings"},
+    {"id": 14, "sector": "Government", "quote": "Clear procurement documentation and on-time delivery.", "name": "Evelyn Moore", "title": "Procurement Lead", "company": "State Facilities Office"},
+    {"id": 15, "sector": "Government", "quote": "They handled permits and safety with precision.", "name": "Andre Simmons", "title": "City Liaison", "company": "Metropolitan Affairs"},
+    {"id": 16, "sector": "Government", "quote": "Fluent coordination with multiple agencies and stakeholders.", "name": "Priya Nair", "title": "Program Director", "company": "Public Impact Council"},
+    {"id": 17, "sector": "Government", "quote": "Impeccable staging for a high-profile announcement.", "name": "Hannah Blake", "title": "Communications Officer", "company": "Civic Communications Bureau"},
+    {"id": 18, "sector": "Government", "quote": "ADA-compliant seating and signage done right.", "name": "Logan Turner", "title": "Accessibility Coordinator", "company": "City Services Dept."},
+    {"id": 19, "sector": "Government", "quote": "The briefing cadence and command-post reporting were spot on.", "name": "Omar Castillo", "title": "Operations Manager", "company": "Regional Response Office"},
+    {"id": 20, "sector": "Government", "quote": "Delivered ahead of schedule with zero safety incidents.", "name": "Diane Porter", "title": "Project Supervisor", "company": "County Events Authority"},
+
+    {"id": 21, "sector": "Healthcare", "quote": "Strong communication and smooth coordination with our medical partners.", "name": "Patricia Gomez", "title": "Events Supervisor", "company": "UnitedCare Health"},
+    {"id": 22, "sector": "Healthcare", "quote": "Reliable AV for our high-stakes surgical demos.", "name": "Laura Bennett", "title": "Program Manager", "company": "NovaTech Healthcare"},
+    {"id": 23, "sector": "Healthcare", "quote": "Delivered exactly what our board needed to decide confidently.", "name": "Kevin Armstrong", "title": "Executive Administrator", "company": "GateHouse Medical"},
+    {"id": 24, "sector": "Healthcare", "quote": "Breakouts ran on time with excellent audio quality.", "name": "Megan Shaw", "title": "Education Coordinator", "company": "National Health Alliance"},
+    {"id": 25, "sector": "Healthcare", "quote": "Their team respected privacy protocols at every step.", "name": "Dr. Amit Khanna", "title": "Clinical Lead", "company": "MedAdvance Labs"},
+    {"id": 26, "sector": "Healthcare", "quote": "Great attendee feedback—clear visuals and clean acoustics.", "name": "Olivia Hart", "title": "Conference Manager", "company": "CareVision Network"},
+    {"id": 27, "sector": "Healthcare", "quote": "They handled complex scheduling with multiple physician panels.", "name": "Eric Nguyen", "title": "Operations Specialist", "company": "TriState Medical Assoc."},
+    {"id": 28, "sector": "Healthcare", "quote": "The hybrid stream worked flawlessly for remote clinics.", "name": "Sofia Alvarez", "title": "Telehealth Coordinator", "company": "Pathway Health"},
+    {"id": 29, "sector": "Healthcare", "quote": "Precise, respectful, and technically on point.", "name": "Noah Richards", "title": "Program Director", "company": "MedBridge Institute"},
+    {"id": 30, "sector": "Healthcare", "quote": "We will partner with them again for our national symposium.", "name": "Grace Patel", "title": "Event Lead", "company": "HealthForward Foundation"}
+  ]
+}
