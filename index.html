@@ -58,6 +58,24 @@
       --color-gold: #DAA520;
       --color-white: #F5F5F5;
     }
+    
+    /* Stat numbers styling */
+    .stat-number {
+      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-steel-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: var(--color-gold);
+    }
+    
+    @media (max-width: 640px) {
+      .stat-number {
+        -webkit-text-fill-color: var(--color-gold);
+        background: none;
+        color: var(--color-gold) !important;
+        text-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
+      }
+    }
     body {
       font-family: 'Sora', sans-serif;
       color: var(--color-white);
@@ -183,19 +201,19 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
-            <div class="stat-number text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-steel-blue)] mb-2">500+</div>
+            <div class="stat-number text-3xl sm:text-4xl font-bold mb-2">500+</div>
             <div class="text-gray-400 text-sm">Events Produced</div>
           </div>
           <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="stat-number text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-steel-blue)] mb-2">2M+</div>
+            <div class="stat-number text-3xl sm:text-4xl font-bold mb-2">2M+</div>
             <div class="text-gray-400 text-sm">Attendees Reached</div>
           </div>
           <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
-            <div class="stat-number text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-steel-blue)] mb-2">50+</div>
+            <div class="stat-number text-3xl sm:text-4xl font-bold mb-2">50+</div>
             <div class="text-gray-400 text-sm">Major Cities</div>
           </div>
           <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
-            <div class="stat-number text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-steel-blue)] mb-2">100%</div>
+            <div class="stat-number text-3xl sm:text-4xl font-bold mb-2">100%</div>
             <div class="text-gray-400 text-sm">Satisfaction</div>
           </div>
         </div>

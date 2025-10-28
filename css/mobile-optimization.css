@@ -28,12 +28,11 @@ img, video, iframe {
     line-height: 1.2;
   }
   
-  /* Optimize stat numbers for mobile */
+  /* Stat numbers - color and size for mobile */
   .stat-number {
     font-size: 2.5rem !important;
-    -webkit-text-fill-color: var(--color-gold) !important;
-    background: none !important;
     color: var(--color-gold) !important;
+    text-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
   }
   
   /* Reduce section padding on mobile */
