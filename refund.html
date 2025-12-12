@@ -252,7 +252,7 @@
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gold)] via-[var(--color-steel-blue)] to-[var(--color-gold)]" data-aos="fade-up">Refund Policy</h1>
           <p class="text-lg text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">This Refund Policy ("Policy") applies to all event services provided by GAEVENTS PRODUCTION LLC ("GAEVENTS", "we", "us", "our"). All refund requests are processed according to this tier-based schedule.</p>
-          <p class="text-sm text-gray-400 mt-4" data-aos="fade-up" data-aos-delay="200">Last updated: January 21, 2025</p>
+          <p class="text-sm text-gray-400 mt-4" data-aos="fade-up" data-aos-delay="200">Last updated: <span id="lastUpdatedDate"></span></p>
         </div>
       </div>
     </section>
@@ -265,7 +265,7 @@
         <div class="refund-section" data-aos="fade-up">
           <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">1. Policy Overview</h2>
           <p class="text-gray-300 leading-relaxed mb-4">This Refund Policy governs all cancellations and refund requests for event production services provided by GAEVENTS PRODUCTION LLC. By engaging our services, you ("Client") agree to the terms outlined in this policy. This policy is designed to be fair to both parties while accounting for the significant advance commitments, labor, and vendor arrangements required for professional event production.</p>
-          <p class="text-gray-300 leading-relaxed">All refund amounts are calculated based on the total fees paid, excluding the non-refundable deposit, unless otherwise specified. Refunds are processed to the original payment method within 14-21 business days after approval.</p>
+          <p class="text-gray-300 leading-relaxed">All refund amounts are calculated based on the total fees paid, excluding the non-refundable deposit, unless otherwise specified. Refunds are processed to the original payment method within 14-21 business days after approval. All refunds are subject to payment processor policies and may be subject to processing fees imposed by the payment processor.</p>
         </div>
 
         <!-- Refund Eligibility Schedule -->
@@ -279,7 +279,7 @@
                 <tr>
                   <th>Cancellation Period</th>
                   <th>Refund Amount</th>
-                  <th>Processing Fee</th>
+                  <th>Administrative Fee</th>
                   <th>Notes</th>
                 </tr>
               </thead>
@@ -293,13 +293,13 @@
                 <tr>
                   <td><strong>3–6 days before event</strong></td>
                   <td>80% refund</td>
-                  <td>20% admin fee</td>
+                  <td>20% Administrative Fee</td>
                   <td>Option available: Full credit toward future event (valid 12 months) instead of refund</td>
                 </tr>
                 <tr>
                   <td><strong>48–72 hours before event</strong></td>
                   <td>Event credit OR 50% refund</td>
-                  <td>50% admin fee (if refund)</td>
+                  <td>50% Administrative Fee (if refund)</td>
                   <td>Venue and vendor commitments already secured; credit recommended</td>
                 </tr>
                 <tr>
@@ -320,12 +320,12 @@
           <div class="space-y-4">
             <div>
               <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.1 Non-Refundable Deposit</h3>
-              <p class="text-gray-300 leading-relaxed">All initial deposits (typically 25% of total estimated cost) are non-refundable. This deposit secures our services, reserves labor, and commits vendor resources. The deposit amount is clearly stated in your service agreement or proposal.</p>
+              <p class="text-gray-300 leading-relaxed">All initial deposits (typically 25% of total estimated cost) are non-refundable under any circumstances, including cancellation, rescheduling, or Force Majeure events. This deposit secures our services, reserves labor, commits vendor resources, and covers administrative costs. The deposit amount is clearly stated in your service agreement or proposal and is retained regardless of cancellation timing or reason.</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.2 Processing Time</h3>
-              <p class="text-gray-300 leading-relaxed">Approved refunds are processed within 14–21 business days via the original payment method. Processing may take longer during peak periods or if additional verification is required.</p>
+              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.2 Processing Time and Payment Methods</h3>
+              <p class="text-gray-300 leading-relaxed">Approved refunds are processed within 14–21 business days via the original payment method. Refunds will be issued to the same payment method used for the original transaction (credit card, ACH, wire transfer, etc.). Processing may take longer during peak periods, if additional verification is required, or due to payment processor processing times. We are not responsible for delays caused by payment processors or financial institutions.</p>
             </div>
             
             <div>
@@ -372,12 +372,15 @@
         <!-- Cancellation by GAEVENTS -->
         <div class="refund-section" data-aos="fade-up" data-aos-delay="400">
           <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">5. Cancellation by GAEVENTS</h2>
-          <p class="text-gray-300 leading-relaxed mb-4">If GAEVENTS must cancel an event due to circumstances beyond our reasonable control (Force Majeure) or due to our own operational issues, you will receive:</p>
-          <ul class="list-disc ml-6 space-y-2 text-gray-300">
-            <li><strong>100% refund</strong> of all fees paid, including deposits, OR</li>
-            <li><strong>Priority rescheduling</strong> with no additional fees and guaranteed availability for a mutually agreed future date</li>
+          <p class="text-gray-300 leading-relaxed mb-4">If GAEVENTS must cancel an event due to circumstances beyond our reasonable control (Force Majeure) or due to our own operational issues, we will work with you to find a mutually acceptable solution. Our priority is to reschedule your event to a future date that works for all parties.</p>
+          <p class="text-gray-300 leading-relaxed mb-4"><strong>Rescheduling Priority:</strong> If rescheduling is possible, we will offer priority rescheduling with no additional fees and guaranteed availability for a mutually agreed future date. Any fees already paid (excluding the non-refundable deposit) will be applied to the rescheduled event.</p>
+          <p class="text-gray-300 leading-relaxed mb-4"><strong>Refund Option:</strong> If rescheduling is not possible or mutually acceptable, we will provide a refund of fees paid, minus:</p>
+          <ul class="list-disc ml-6 space-y-2 text-gray-300 mb-4">
+            <li>The non-refundable deposit (typically 25% of total)</li>
+            <li>Any non-recoverable third-party costs already incurred (venue deposits, vendor commitments, permits, licenses, etc.)</li>
+            <li>Any administrative fees associated with processing the cancellation</li>
           </ul>
-          <p class="text-gray-300 leading-relaxed mt-4">Force Majeure events include but are not limited to: natural disasters, pandemics, government orders, civil unrest, acts of terrorism, extreme weather conditions, or other events that make event execution impossible or unsafe.</p>
+          <p class="text-gray-300 leading-relaxed mt-4">Force Majeure events include but are not limited to: natural disasters, pandemics, government orders, civil unrest, acts of terrorism, extreme weather conditions, or other events that make event execution impossible or unsafe. We will provide documentation of all non-recoverable costs upon request.</p>
         </div>
 
         <!-- Rescheduling -->
@@ -429,7 +432,7 @@
 
         <!-- CTA Section -->
         <div class="text-center mt-12 pt-8 border-t border-gray-700" data-aos="fade-up" data-aos-delay="1000">
-          <p class="text-sm text-gray-500 mb-6">Last updated: January 21, 2025</p>
+          <p class="text-sm text-gray-500 mb-6">Last updated: <span id="lastUpdatedDateFooter"></span></p>
           <div class="flex flex-wrap justify-center gap-4">
             <a href="contact.html" class="inline-block bg-[var(--color-gold)] hover:bg-white text-black py-3 px-8 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]">Contact Us</a>
             <a href="terms.html" class="inline-block bg-[var(--color-steel-blue)] hover:bg-[var(--color-blue)] text-white py-3 px-8 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-steel-blue)]">View Terms & Conditions</a>
@@ -512,5 +515,19 @@
   
   <!-- Scripts -->
   <script src="components/init.js"></script>
+  <script>
+    // Set dynamic last updated date
+    (function() {
+      const today = new Date();
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+      const formattedDate = monthNames[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear();
+      
+      const dateElements = document.querySelectorAll('#lastUpdatedDate, #lastUpdatedDateFooter');
+      dateElements.forEach(el => {
+        if (el) el.textContent = formattedDate;
+      });
+    })();
+  </script>
 </body>
 </html>
