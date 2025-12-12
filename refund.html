@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Organization">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GAEVENTS Refund Policy - Clear tier-based refund structure for event cancellations. Request refunds based on cancellation timing.">
+  <meta name="description" content="GAEVENTS Refund Policy - Clear tier-based refund structure for event cancellations. Professional event production refund terms and conditions.">
+  <meta name="keywords" content="refund policy, event cancellation, event refund, GAEVENTS refund, event production refund">
+  <meta name="author" content="GAEVENTS PRODUCTION LLC">
   <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaeventsprod.com/refund.html">
+  <meta property="og:title" content="Refund Policy | GAEVENTS">
+  <meta property="og:description" content="Clear tier-based refund structure for event cancellations. Professional event production refund terms.">
+  <meta property="og:image" content="https://gaeventsprod.com/images/hero.jpg">
   
   <title>Refund Policy | GAEVENTS</title>
   <link rel="canonical" href="https://gaeventsprod.com/refund.html">
@@ -16,14 +25,22 @@
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
   <link rel="manifest" href="images/favicon/site.webmanifest">
   
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/light-effects.css">
+  <link rel="stylesheet" href="css/mobile-optimization.css">
   
   <style>
     :root {
@@ -32,6 +49,8 @@
       --color-blue: #005C99;
       --color-gold: #DAA520;
       --color-white: #F5F5F5;
+      --color-steel-blue: #4682B4;
+      --color-charcoal: #36454F;
     }
     body {
       font-family: 'Sora', sans-serif;
@@ -42,144 +61,388 @@
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
     }
+    
+    .refund-section {
+      background: linear-gradient(145deg, rgba(54, 69, 79, 0.6), rgba(31, 31, 31, 0.8));
+      border-left: 4px solid var(--color-gold);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .refund-section:hover {
+      border-left-color: var(--color-steel-blue);
+      background: linear-gradient(145deg, rgba(70, 130, 180, 0.2), rgba(54, 69, 79, 0.7));
+    }
+    
+    .refund-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    .refund-table thead {
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.3), rgba(70, 130, 180, 0.3));
+    }
+    .refund-table th {
+      padding: 1rem;
+      text-align: left;
+      font-weight: 700;
+      color: var(--color-gold);
+      border-bottom: 2px solid var(--color-gold);
+    }
+    .refund-table td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(70, 130, 180, 0.2);
+      color: var(--color-white);
+    }
+    .refund-table tr:last-child td {
+      border-bottom: none;
+    }
+    .refund-table tr:hover {
+      background: rgba(218, 165, 32, 0.1);
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(218, 165, 32, 0.15), rgba(70, 130, 180, 0.15));
+      border: 2px solid var(--color-gold);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
   </style>
 </head>
 <body>
+  <!-- Animated Light Particles Background -->
+  <div class="light-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <!-- Glowing Light Beams -->
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  <div class="light-beam"></div>
+  
+  <!-- Skip Link for Accessibility -->
   <a href="#main-content" id="skip-link" class="sr-only focus:not-sr-only">Skip to main content</a>
   
+  <!-- Header -->
   <header class="bg-gray-900 py-4 sticky top-0 z-50 backdrop-blur-sm bg-gray-900/95" role="banner">
     <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-4">
-      <div class="flex items-center">
+      <div class="flex items-center" itemscope itemtype="https://schema.org/Organization">
         <a href="index.html" class="focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded" aria-label="GAEVENTS Home">
-          <img src="images/logo.svg" alt="GAEVENTS" class="h-6 sm:h-8 w-auto transition-opacity hover:opacity-80" style="max-height: 12rem; max-width: none; filter: brightness(0) invert(1);" onerror="this.onerror=null; this.src='images/logo.png';">
+          <img src="images/logo.svg" alt="GAEVENTS" class="h-6 sm:h-8 w-auto transition-opacity hover:opacity-80" style="max-height: 12rem; max-width: none; filter: brightness(0) invert(1);" itemprop="logo" onerror="this.onerror=null; this.src='images/logo.png';">
         </a>
       </div>
       <nav aria-label="Main navigation">
-        <ul class="flex flex-wrap gap-2 sm:gap-4">
-          <li><a href="index.html" class="hover:text-[var(--color-gold)]">Home</a></li>
-          <li><a href="about.html" class="hover:text-[var(--color-gold)]">About</a></li>
-          <li><a href="services.html" class="hover:text-[var(--color-gold)]">Services</a></li>
-          <li><a href="contact.html" class="hover:text-[var(--color-gold)]">Contact</a></li>
+        <ul class="flex flex-wrap gap-2 sm:gap-4" role="list">
+          <li>
+            <a href="index.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Home</a>
+          </li>
+          <li>
+            <a href="about.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">About</a>
+          </li>
+          <li>
+            <a href="services.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Services</a>
+          </li>
+          <li>
+            <a href="clients.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Clients</a>
+          </li>
+          <li>
+            <a href="contact.html" 
+               class="hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+               aria-current="false">Contact</a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main id="main-content" role="main">
-    <section class="bg-[var(--color-gray)] py-16" data-aos="fade-up">
+    <!-- Hero Section -->
+    <section class="section-background py-20 relative" data-aos="fade-up">
       <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-6 text-[var(--color-gold)]">Refund Policy</h1>
-        <p class="mb-6 text-lg">This Refund Policy ("Policy") applies to event services provided by GAEVENTS PRODUCTION LLC ("GAEVENTS", "we", "us"). All refund requests are processed according to this tier-based schedule.</p>
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gold)] via-[var(--color-steel-blue)] to-[var(--color-gold)]" data-aos="fade-up">Refund Policy</h1>
+          <p class="text-lg text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">This Refund Policy ("Policy") applies to all event services provided by GAEVENTS PRODUCTION LLC ("GAEVENTS", "we", "us", "our"). All refund requests are processed according to this tier-based schedule.</p>
+          <p class="text-sm text-gray-400 mt-4" data-aos="fade-up" data-aos-delay="200">Last updated: January 21, 2025</p>
+        </div>
+      </div>
+    </section>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4 text-[var(--color-gold)]">Refund Eligibility Schedule</h2>
-        <div class="overflow-x-auto mb-8">
-          <table class="w-full border-collapse border border-gray-700">
-            <thead>
-              <tr class="bg-[var(--color-black)]">
-                <th class="border border-gray-700 px-4 py-3 text-left">Cancellation Period</th>
-                <th class="border border-gray-700 px-4 py-3 text-left">Refund Amount</th>
-                <th class="border border-gray-700 px-4 py-3 text-left">Processing Fee</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-[var(--color-black)]/50">
-                <td class="border border-gray-700 px-4 py-3"><strong>7+ days before event</strong></td>
-                <td class="border border-gray-700 px-4 py-3">100% refund (excluding deposit)</td>
-                <td class="border border-gray-700 px-4 py-3">No fee</td>
-              </tr>
-              <tr class="bg-[var(--color-black)]/50">
-                <td class="border border-gray-700 px-4 py-3"><strong>3–6 days before event</strong></td>
-                <td class="border border-gray-700 px-4 py-3">80% refund</td>
-                <td class="border border-gray-700 px-4 py-3">20% admin fee</td>
-              </tr>
-              <tr class="bg-[var(--color-black)]/50">
-                <td class="border border-gray-700 px-4 py-3"><strong>48–72 hours before event</strong></td>
-                <td class="border border-gray-700 px-4 py-3">Event credit OR 50% refund</td>
-                <td class="border border-gray-700 px-4 py-3">50% admin fee (if refund)</td>
-              </tr>
-              <tr class="bg-[var(--color-black)]/50">
-                <td class="border border-gray-700 px-4 py-3"><strong>Less than 48 hours</strong></td>
-                <td class="border border-gray-700 px-4 py-3">No refund</td>
-                <td class="border border-gray-700 px-4 py-3">100% retained (venue & labor committed)</td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Refund Policy Content -->
+    <section class="section-background py-12 relative pb-20">
+      <div class="container mx-auto px-4 max-w-5xl">
+        
+        <!-- Introduction -->
+        <div class="refund-section" data-aos="fade-up">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">1. Policy Overview</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">This Refund Policy governs all cancellations and refund requests for event production services provided by GAEVENTS PRODUCTION LLC. By engaging our services, you ("Client") agree to the terms outlined in this policy. This policy is designed to be fair to both parties while accounting for the significant advance commitments, labor, and vendor arrangements required for professional event production.</p>
+          <p class="text-gray-300 leading-relaxed">All refund amounts are calculated based on the total fees paid, excluding the non-refundable deposit, unless otherwise specified. Refunds are processed to the original payment method within 14-21 business days after approval.</p>
         </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4 text-[var(--color-gold)]">Key Terms</h2>
-        <ul class="list-disc ml-6 space-y-2 mb-6">
-          <li><strong>Deposit:</strong> All initial deposits (typically 25% of total) are non-refundable to secure services, labor and vendor commitments.</li>
-          <li><strong>Processing Time:</strong> Refunds are processed within 14–21 business days via original payment method.</li>
-          <li><strong>Event Credit:</strong> For cancellations within 3–6 days, you may choose a full credit toward a future event (valid 12 months) instead of the refund.</li>
-          <li><strong>Third-Party Charges:</strong> Non-refundable fees from venues, vendors or permits already paid on your behalf cannot be refunded.</li>
-          <li><strong>Force Majeure:</strong> If GAEVENTS cancels due to circumstances beyond our control, we will offer full refund or rescheduling.</li>
-        </ul>
+        <!-- Refund Eligibility Schedule -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">2. Refund Eligibility Schedule</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">The following table outlines our tier-based refund structure based on cancellation timing relative to the scheduled event date:</p>
+          
+          <div class="overflow-x-auto">
+            <table class="refund-table">
+              <thead>
+                <tr>
+                  <th>Cancellation Period</th>
+                  <th>Refund Amount</th>
+                  <th>Processing Fee</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>7+ days before event</strong></td>
+                  <td>100% refund (excluding deposit)</td>
+                  <td>No fee</td>
+                  <td>Full refund of all fees paid, minus the non-refundable deposit (typically 25% of total)</td>
+                </tr>
+                <tr>
+                  <td><strong>3–6 days before event</strong></td>
+                  <td>80% refund</td>
+                  <td>20% admin fee</td>
+                  <td>Option available: Full credit toward future event (valid 12 months) instead of refund</td>
+                </tr>
+                <tr>
+                  <td><strong>48–72 hours before event</strong></td>
+                  <td>Event credit OR 50% refund</td>
+                  <td>50% admin fee (if refund)</td>
+                  <td>Venue and vendor commitments already secured; credit recommended</td>
+                </tr>
+                <tr>
+                  <td><strong>Less than 48 hours</strong></td>
+                  <td>No refund</td>
+                  <td>100% retained</td>
+                  <td>Venue, labor, and vendor commitments fully committed; no refund possible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4 text-[var(--color-gold)]">How to Request a Refund</h2>
-        <ol class="list-decimal ml-6 space-y-2 mb-6">
-          <li>Email <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)]">info@gaeventsprod.com</a> with subject "Refund Request – [Your Event Name]".</li>
-          <li>Include: Event date, contact information and original invoice number.</li>
-          <li>We will confirm receipt within 24 hours and process per this schedule.</li>
-          <li>Refunds are issued to the original payment method only.</li>
-        </ol>
+        <!-- Key Terms -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">3. Key Terms & Definitions</h2>
+          
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.1 Non-Refundable Deposit</h3>
+              <p class="text-gray-300 leading-relaxed">All initial deposits (typically 25% of total estimated cost) are non-refundable. This deposit secures our services, reserves labor, and commits vendor resources. The deposit amount is clearly stated in your service agreement or proposal.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.2 Processing Time</h3>
+              <p class="text-gray-300 leading-relaxed">Approved refunds are processed within 14–21 business days via the original payment method. Processing may take longer during peak periods or if additional verification is required.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.3 Event Credit</h3>
+              <p class="text-gray-300 leading-relaxed">For cancellations within 3–6 days of the event, you may choose a full credit toward a future event instead of the partial refund. Credits are valid for 12 months from the original event date and can be applied to any GAEVENTS service. Credits are non-transferable and cannot be converted to cash.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.4 Third-Party Charges</h3>
+              <p class="text-gray-300 leading-relaxed">Non-refundable fees from venues, vendors, permits, licenses, or other third parties already paid on your behalf cannot be refunded. These charges are deducted from any refund amount. We will provide documentation of all third-party charges upon request.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-[var(--color-steel-blue)]">3.5 Cancellation Date Calculation</h3>
+              <p class="text-gray-300 leading-relaxed">The cancellation period is calculated from the date we receive your written cancellation notice to the scheduled start date and time of your event. Cancellation notices must be received during business hours (Monday–Friday, 9:00 AM – 6:00 PM ET) to be processed on the same day.</p>
+            </div>
+          </div>
+        </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4 text-[var(--color-gold)]">Cancellation by GAEVENTS</h2>
-        <p class="mb-4">If GAEVENTS must cancel due to unforeseen circumstances (e.g., natural disasters, government orders, pandemic restrictions), you will receive:</p>
-        <ul class="list-disc ml-6 space-y-2 mb-6">
-          <li>100% refund of all fees paid, OR</li>
-          <li>Priority rescheduling with no additional fees</li>
-        </ul>
+        <!-- How to Request Refund -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="300">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">4. How to Request a Refund</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">To request a refund, please follow these steps:</p>
+          <ol class="list-decimal ml-6 space-y-3 text-gray-300">
+            <li><strong>Email Notification:</strong> Send an email to <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors">info@gaeventsprod.com</a> with the subject line "Refund Request – [Your Event Name]".</li>
+            <li><strong>Required Information:</strong> Include the following in your email:
+              <ul class="list-disc ml-6 mt-2 space-y-1">
+                <li>Event date and location</li>
+                <li>Original invoice number or contract reference</li>
+                <li>Contact information (name, phone, email)</li>
+                <li>Reason for cancellation (optional but helpful)</li>
+                <li>Preferred refund method (original payment method or event credit, if applicable)</li>
+              </ul>
+            </li>
+            <li><strong>Confirmation:</strong> We will confirm receipt of your request within 24 hours (during business days) and provide an estimated processing timeline.</li>
+            <li><strong>Processing:</strong> Refunds are processed according to the schedule in Section 2 and issued to the original payment method only, unless otherwise agreed in writing.</li>
+          </ol>
+          
+          <div class="highlight-box mt-6">
+            <p class="text-gray-300"><strong class="text-[var(--color-gold)]">Important:</strong> Verbal cancellations are not accepted. All cancellation and refund requests must be submitted in writing via email to ensure proper documentation and processing.</p>
+          </div>
+        </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4 text-[var(--color-gold)]">Rescheduling</h2>
-        <p class="mb-4">Rescheduling requests must be submitted in writing at least 14 days before the original event date. Subject to venue and vendor availability. Rescheduling fees may apply if within 14 days.</p>
+        <!-- Cancellation by GAEVENTS -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="400">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">5. Cancellation by GAEVENTS</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">If GAEVENTS must cancel an event due to circumstances beyond our reasonable control (Force Majeure) or due to our own operational issues, you will receive:</p>
+          <ul class="list-disc ml-6 space-y-2 text-gray-300">
+            <li><strong>100% refund</strong> of all fees paid, including deposits, OR</li>
+            <li><strong>Priority rescheduling</strong> with no additional fees and guaranteed availability for a mutually agreed future date</li>
+          </ul>
+          <p class="text-gray-300 leading-relaxed mt-4">Force Majeure events include but are not limited to: natural disasters, pandemics, government orders, civil unrest, acts of terrorism, extreme weather conditions, or other events that make event execution impossible or unsafe.</p>
+        </div>
 
-        <h2 class="text-2xl font-bold mt-8 mb-4 text-[var(--color-gold)]">Contact for Refunds</h2>
-        <p class="mb-4">Email: <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)]">info@gaeventsprod.com</a></p>
-        <p class="mb-4">Phone: Available upon request</p>
-        <p class="mb-4">Office Hours: Monday–Friday, 9:00 AM – 6:00 PM ET</p>
+        <!-- Rescheduling -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="500">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">6. Rescheduling Policy</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">Rescheduling requests must be submitted in writing at least 14 days before the original event date. Rescheduling is subject to:</p>
+          <ul class="list-disc ml-6 space-y-2 text-gray-300">
+            <li>Venue availability and any venue-imposed fees</li>
+            <li>Vendor availability and any vendor-imposed fees</li>
+            <li>Our team and equipment availability</li>
+            <li>Any additional costs incurred due to the rescheduling</li>
+          </ul>
+          <p class="text-gray-300 leading-relaxed mt-4"><strong>Rescheduling Fees:</strong> If a rescheduling request is made within 14 days of the original event date, a rescheduling fee of 15% of the total contract value may apply to cover administrative and coordination costs. Rescheduling fees are waived for Force Majeure situations or if GAEVENTS initiates the rescheduling.</p>
+        </div>
 
-        <p class="mt-8 text-sm text-gray-400">Last updated: January 21, 2025</p>
+        <!-- Partial Services -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="600">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">7. Partial Service Cancellations</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">If you cancel only a portion of the contracted services (e.g., canceling catering but keeping AV services), the refund policy applies proportionally to the canceled services. The remaining services will continue as contracted, and any applicable discounts or package pricing may be adjusted accordingly.</p>
+        </div>
+
+        <!-- Disputes -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="700">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">8. Dispute Resolution</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">If you disagree with a refund decision, please contact us at <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors">info@gaeventsprod.com</a> to discuss your concerns. We are committed to fair resolution and will review each case individually.</p>
+          <p class="text-gray-300 leading-relaxed">If we cannot reach a mutually acceptable resolution, disputes shall be governed by the laws of the State of Georgia, United States, and subject to the exclusive jurisdiction of the state and federal courts located in Georgia, as outlined in our Terms & Conditions.</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="800">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">9. Contact for Refunds</h2>
+          <div class="bg-gradient-to-br from-[var(--color-charcoal)] to-[var(--color-gray)] p-6 rounded-lg border border-[var(--color-steel-blue)]">
+            <p class="text-gray-300 mb-3"><strong class="text-[var(--color-gold)]">Email:</strong> <a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors">info@gaeventsprod.com</a></p>
+            <p class="text-gray-300 mb-3"><strong class="text-[var(--color-gold)]">Phone:</strong> <a href="tel:+17866084982" class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors">(786) 608-4982</a> (Available upon request for urgent matters)</p>
+            <p class="text-gray-300 mb-3"><strong class="text-[var(--color-gold)]">Office Hours:</strong> Monday–Friday, 9:00 AM – 6:00 PM Eastern Time</p>
+            <p class="text-gray-300"><strong class="text-[var(--color-gold)]">Mailing Address:</strong><br>
+            GAEVENTS PRODUCTION LLC<br>
+            190 FOUNDERS DR<br>
+            DAWSONVILLE, GA 30534, USA</p>
+          </div>
+        </div>
+
+        <!-- Policy Updates -->
+        <div class="refund-section" data-aos="fade-up" data-aos-delay="900">
+          <h2 class="text-2xl font-bold mb-4 text-[var(--color-gold)]">10. Policy Updates</h2>
+          <p class="text-gray-300 leading-relaxed">We reserve the right to update or modify this Refund Policy at any time. The most current version will always be posted on our website with the "Last updated" date clearly indicated. Material changes to this policy will be communicated to clients with active contracts via email at least 30 days before the changes take effect.</p>
+          <p class="text-gray-300 leading-relaxed mt-4">Your continued use of our services after any changes constitutes acceptance of the revised policy. If you do not agree with any changes, you may cancel your contract according to the terms in effect at the time of your original agreement.</p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center mt-12 pt-8 border-t border-gray-700" data-aos="fade-up" data-aos-delay="1000">
+          <p class="text-sm text-gray-500 mb-6">Last updated: January 21, 2025</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="inline-block bg-[var(--color-gold)] hover:bg-white text-black py-3 px-8 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]">Contact Us</a>
+            <a href="terms.html" class="inline-block bg-[var(--color-steel-blue)] hover:bg-[var(--color-blue)] text-white py-3 px-8 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-steel-blue)]">View Terms & Conditions</a>
+            <a href="index.html" class="inline-block bg-transparent hover:bg-[var(--color-gray)] text-[var(--color-gold)] border-2 border-[var(--color-gold)] py-3 px-8 rounded-full font-semibold transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]">Back to Home</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-900 py-12 border-t border-gray-800" role="contentinfo">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
         <div class="space-y-4">
           <h3 class="text-lg font-bold text-[var(--color-gold)]">GAEVENTS</h3>
-          <address class="not-italic text-sm text-gray-400">
-            <p><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
-            <p>190 FOUNDERS DR</p>
-            <p>DAWSONVILLE, GA 30534, USA</p>
-            <p><a href="mailto:info@gaeventsprod.com" class="text-[var(--color-blue)] hover:text-[var(--color-gold)]">info@gaeventsprod.com</a></p>
-            <p><a href="tel:+17866084982" class="text-[var(--color-blue)] hover:text-[var(--color-gold)]">(786) 608-4982</a></p>
+          <address class="not-italic text-sm text-gray-400 leading-relaxed">
+            <p class="mb-2"><strong class="text-white">GAEVENTS PRODUCTION LLC</strong></p>
+            <p class="mb-2">190 FOUNDERS DR</p>
+            <p class="mb-2">DAWSONVILLE, GA 30534, USA</p>
+            <p class="mb-2">
+              <a href="mailto:info@gaeventsprod.com" 
+                 class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded"
+                 aria-label="Email GAEVENTS">info@gaeventsprod.com</a>
+            </p>
+            <p class="mb-2">
+              <a href="tel:+17866084982" 
+                 class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded"
+                 aria-label="Call GAEVENTS">(786) 608-4982</a>
+            </p>
+            <p class="mb-2">
+              <a href="https://www.instagram.com/gaeventsprod/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="text-[var(--color-blue)] hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded inline-flex items-center gap-2"
+                 aria-label="Follow GAEVENTS on Instagram">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
+                </svg>
+                Instagram
+              </a>
+            </p>
           </address>
         </div>
+        
+        <!-- Quick Links -->
         <div class="space-y-4">
           <h3 class="text-lg font-bold text-[var(--color-gold)]">Quick Links</h3>
-          <nav aria-label="Footer navigation" class="space-y-2 text-sm">
-            <div><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)]">About Us</a></div>
-            <div><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)]">Services</a></div>
-            <div><a href="contact.html" class="text-gray-400 hover:text-[var(--color-gold)]">Contact</a></div>
+          <nav aria-label="Footer navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="index.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Home</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">About Us</a></li>
+              <li><a href="services.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Services</a></li>
+              <li><a href="clients.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Clients</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Contact</a></li>
+            </ul>
           </nav>
         </div>
+        
+        <!-- Legal -->
         <div class="space-y-4">
           <h3 class="text-lg font-bold text-[var(--color-gold)]">Legal</h3>
-          <nav aria-label="Legal navigation" class="space-y-2 text-sm">
-            <div><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)]">Terms & Conditions</a></div>
-            <div><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)]">Privacy Policy</a></div>
-            <div><a href="refund.html" class="text-[var(--color-gold)] font-semibold">Refund Policy</a></div>
+          <nav aria-label="Legal navigation">
+            <ul class="space-y-2 text-sm">
+              <li><a href="terms.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Terms & Conditions</a></li>
+              <li><a href="privacy.html" class="text-gray-400 hover:text-[var(--color-gold)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Privacy Policy</a></li>
+              <li><a href="refund.html" class="text-[var(--color-gold)] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)] rounded">Refund Policy</a></li>
+            </ul>
           </nav>
         </div>
       </div>
+      
+      <!-- Copyright -->
       <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
         <p>&copy; <span id="currentYear">2025</span> GAEVENTS PRODUCTION LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>
   
+  <!-- Scripts -->
   <script src="components/init.js"></script>
 </body>
 </html>
-
