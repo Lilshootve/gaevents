@@ -63,36 +63,47 @@
       font-weight: 700;
     }
     
-    /* Ensure content visibility */
+    /* Ensure content visibility - critical fixes */
+    body {
+      position: relative;
+    }
+    
     main {
       position: relative;
-      z-index: 10 !important;
+      z-index: 5;
       min-height: 60vh;
       background: transparent;
     }
     
     section {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
     
     section.section-background {
       position: relative;
-      z-index: 1;
+      z-index: 2;
+    }
+    
+    section.section-background > * {
+      position: relative;
+      z-index: 3;
     }
     
     .container {
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
     
-    /* Override light effects z-index */
-    .light-particles {
-      z-index: 0 !important;
+    /* Ensure header and footer are above effects */
+    header {
+      position: relative;
+      z-index: 50 !important;
     }
     
-    .light-beam {
-      z-index: 0 !important;
+    footer {
+      position: relative;
+      z-index: 5;
     }
     
     .refund-section {
@@ -234,7 +245,7 @@
   </header>
 
   <!-- Main Content -->
-  <main id="main-content" role="main" class="relative z-10">
+  <main id="main-content" role="main">
     <!-- Hero Section -->
     <section class="section-background py-20 relative" data-aos="fade-up">
       <div class="container mx-auto px-4 relative z-10">

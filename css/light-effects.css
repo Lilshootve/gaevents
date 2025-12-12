@@ -75,9 +75,19 @@ html {
 }
 
 /* Ensure content layers above particles */
-main, header, footer {
+main {
   position: relative;
-  z-index: 1;
+  z-index: 10;
+}
+
+header {
+  position: relative;
+  z-index: 50;
+}
+
+footer {
+  position: relative;
+  z-index: 10;
 }
 
 /* Enhanced Section Backgrounds */
@@ -88,7 +98,14 @@ main, header, footer {
   );
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
+
+.section-background > * {
+  position: relative;
+  z-index: 2;
+}
+
 .section-background::before {
   content: '';
   position: absolute;
