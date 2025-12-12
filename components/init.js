@@ -60,12 +60,41 @@
   function initAnimations() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
+    // Ensure all elements are visible by default (fallback if AOS fails)
+    const aosElements = document.querySelectorAll('[data-aos]');
+    aosElements.forEach(el => {
+      el.style.opacity = '1';
+      el.style.visibility = 'visible';
+    });
+    
+    // Try to initialize AOS if available
     if (!prefersReducedMotion && typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 400,
-        once: true,
-        offset: 100,
-        easing: 'ease-in-out'
+      try {
+        AOS.init({
+          duration: 400,
+          once: true,
+          offset: 100,
+          easing: 'ease-in-out',
+          disable: false
+        });
+        
+        // Mark body as AOS ready after a short delay
+        setTimeout(() => {
+          document.body.classList.add('aos-ready');
+        }, 100);
+      } catch (e) {
+        console.warn('AOS initialization failed, content will remain visible:', e);
+        // Ensure content stays visible if AOS fails
+        aosElements.forEach(el => {
+          el.style.opacity = '1';
+          el.style.visibility = 'visible';
+        });
+      }
+    } else {
+      // If AOS is not available or reduced motion is preferred, ensure visibility
+      aosElements.forEach(el => {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
       });
     }
   }

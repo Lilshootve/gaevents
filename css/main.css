@@ -152,3 +152,57 @@ a, button {
   border: 2px solid #16a34a;
 }
 
+/* Ensure main content is always visible */
+main {
+  position: relative;
+  z-index: 10;
+  min-height: 50vh;
+}
+
+main > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure sections are visible */
+section {
+  position: relative;
+  z-index: 1;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* CRITICAL: Ensure all content is visible by default */
+/* Override AOS CSS that might hide elements */
+[data-aos] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+
+/* Override AOS body class hiding */
+body [data-aos] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Only allow AOS to hide elements if it's fully initialized and working */
+/* This will be applied via JavaScript after AOS confirms it's ready */
+body.aos-init.aos-ready [data-aos]:not(.aos-animate) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* Ensure containers are visible */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure text is visible */
+p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a {
+  color: inherit;
+}
